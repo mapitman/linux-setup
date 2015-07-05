@@ -6,7 +6,7 @@ normal=$(tput sgr0)
 sudo apt-get install git mercurial curl vim-nox ctags
 
 # Setup zsh and oh-my-zsh
-curl -Lo ~/ohmysh-install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+curl -Lo ~/ohmyzsh-install.sh https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 . ~/ohmyzsh-install.sh
 rm ~/ohmyzsh-install.sh
 sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
