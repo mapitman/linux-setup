@@ -6,7 +6,9 @@ normal=$(tput sgr0)
 sudo apt-get install git mercurial curl vim-nox ctags
 
 # Setup zsh and oh-my-zsh
-source < "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -sSLo ~/ohmysh-install.sh https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+source ~/ohmyzsh-install.sh
+rm ~/ohmyzsh-install.sh
 sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
 
 # Setup Golang
@@ -49,5 +51,7 @@ echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
 
 # Setup Docker
-source < "$(curl -sSL https://get.docker.com/)"
+curl -sSLo ~/docker-setup.sh https://get.docker.com/
+source ~/docker-setup.sh
+rm ~/docker-setup.sh
 sudo usermod -aG docker $USER
