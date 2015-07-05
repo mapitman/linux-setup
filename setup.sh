@@ -7,7 +7,7 @@ sudo apt-get install git mercurial curl vim-nox ctags
 
 # Setup zsh and oh-my-zsh
 curl -sSLo ~/ohmysh-install.sh https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-source ~/ohmyzsh-install.sh
+. ~/ohmyzsh-install.sh
 rm ~/ohmyzsh-install.sh
 sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
 
@@ -52,6 +52,6 @@ echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
 
 # Setup Docker
 curl -sSLo ~/docker-setup.sh https://get.docker.com/
-source ~/docker-setup.sh
+. ~/docker-setup.sh
 rm ~/docker-setup.sh
 sudo usermod -aG docker $USER
