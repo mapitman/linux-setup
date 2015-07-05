@@ -3,12 +3,9 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 # install necessary packages
-sudo apt-get install git mercurial curl vim-nox ctags
+sudo apt-get install mercurial curl vim-nox ctags
 
-# Setup zsh and oh-my-zsh
-curl -Lo ~/ohmyzsh-install.sh https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-. ~/ohmyzsh-install.sh
-rm ~/ohmyzsh-install.sh
+# Change Oh My Zsh theme
 sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
 
 # Setup Golang
@@ -49,9 +46,3 @@ git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
-
-# Setup Docker
-curl -Lo ~/docker-setup.sh https://get.docker.com/
-. ~/docker-setup.sh
-rm ~/docker-setup.sh
-sudo usermod -aG docker $USER
