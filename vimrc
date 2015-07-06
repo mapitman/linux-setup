@@ -1,6 +1,6 @@
 execute pathogen#infect()
 call pathogen#helptags() 
-colorscheme atom-dark
+colorscheme atom-dark-256
 set nocompatible
 syntax on
 filetype plugin indent on
