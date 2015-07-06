@@ -39,7 +39,7 @@ curl -Lo ~/.vimrc https://raw.githubusercontent.com/mapitman/linux-setup/master/
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -Lo ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 mkdir -p ~/.vim/colors && \
-curl -Lo ~/.vim/colors/atom-dark.vim https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark.vim
+curl -Lo ~/.vim/colors/atom-dark-256.vim https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete
 git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
