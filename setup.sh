@@ -10,7 +10,7 @@ sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
 
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.4.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.5.linux-amd64.tar.gz
 mkdir ~/go
 mkdir ~/go/bin
 mkdir ~/go/pkg
