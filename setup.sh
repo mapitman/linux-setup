@@ -16,7 +16,7 @@ mkdir ~/go/bin
 mkdir ~/go/pkg
 mkdir ~/go/src
 echo export GOPATH=\"\$HOME/go\" >> ~/.zshrc
-echo export PATH=\"\$PATH:/usr/local/go/bin:$GOPATH/bin\" >> ~/.zshrc
+echo export PATH=\"\$PATH:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.zshrc
 export GOPATH="$HOME/go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 go get -u github.com/jstemmer/gotags
