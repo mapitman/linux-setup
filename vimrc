@@ -2,6 +2,7 @@ execute pathogen#infect()
 call pathogen#helptags() 
 colorscheme atom-dark-256
 set nocompatible
+set t_Co=256
 syntax on
 filetype plugin indent on
 set tabstop=4
