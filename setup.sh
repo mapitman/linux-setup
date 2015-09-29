@@ -8,6 +8,13 @@ sudo apt-get install mercurial curl vim-nox ctags
 # Change Oh My Zsh theme
 sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
 
+# Add some aliases
+echo alias ll=\"ls -l\" >> ~/.zshrc                                                            
+echo alias cd=\"pushd\"  >> ~/.zshrc
+echo alias pd=\"popd\"  >> ~/.zshrc
+echo alias zshrc=\"vim ~/.zshrc\"  >> ~/.zshrc
+
+
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.5.linux-amd64.tar.gz
