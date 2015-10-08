@@ -15,7 +15,7 @@ add-apt-repository ppa:eviltwin1/feedreader-stable
 add-apt-repository ppa:vala-team/ppa
 
 apt-get update
-apt-get install feedreader hipchat build-essential valac
+apt-get install feedreader hipchat build-essential valac autoconf autogen libtool flex bison
 
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
