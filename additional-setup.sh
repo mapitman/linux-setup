@@ -15,7 +15,7 @@ add-apt-repository ppa:eviltwin1/feedreader-stable
 add-apt-repository ppa:vala-team/ppa
 
 apt-get update
-apt-get install feedreader hipchat
+apt-get install feedreader hipchat build-essential valac
 
 # Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
