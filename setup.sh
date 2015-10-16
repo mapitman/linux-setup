@@ -52,5 +52,6 @@ git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplet
 git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/digitaltoad/vim-jade.git ~/.vim/bundle/vim-jade
+git clone https://github.com/mustache/vim-mustache-handlebars.git ~/.vim/bundle/vim-mustache-handlebars
 echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
