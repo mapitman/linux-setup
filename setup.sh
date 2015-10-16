@@ -55,3 +55,9 @@ git clone https://github.com/digitaltoad/vim-jade.git ~/.vim/bundle/vim-jade
 git clone https://github.com/mustache/vim-mustache-handlebars.git ~/.vim/bundle/vim-mustache-handlebars
 echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
+
+# setup nodejs
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+source ~/.zshrc
+nvm install stable
+npm install -g gulp
