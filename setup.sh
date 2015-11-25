@@ -18,8 +18,8 @@ echo alias ll=\"ls -l\" >> ~/.zshrc
 echo alias cd=\"pushd\"  >> ~/.zshrc
 echo alias pd=\"popd\"  >> ~/.zshrc
 echo alias zshrc=\"vim ~/.zshrc\"  >> ~/.zshrc
-echo alias github=\"cd ~/src/github" >> ~/.zshrc
-echo alias bitbucket=\"cd ~/src/bitbucket" >> ~/.zshrc
+echo alias github=\"cd ~/src/github\" >> ~/.zshrc
+echo alias bitbucket=\"cd ~/src/bitbucket\" >> ~/.zshrc
 
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz
