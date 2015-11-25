@@ -59,7 +59,7 @@ echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
 # setup nodejs
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 echo export NVM_DIR="/home/mark/.nvm" >> ~/.zshrc
-echo \[ -s \"\$NVM_DIR/nvm.sh\"\] \&\& \. \"\$NVM_DIR/nvm.sh\" >> ~/.zshrc
+echo \[ -s \"\$NVM_DIR/nvm.sh\" \] \&\& \. \"\$NVM_DIR/nvm.sh\" >> ~/.zshrc
 source ~/.zshrc
 nvm install stable
 npm install -g gulp
