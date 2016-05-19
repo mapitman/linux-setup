@@ -63,7 +63,14 @@ echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
 
 # setup nodejs
-
+mkdir -p ~/src/github/nodejs
+cd ~/src/github/nodejs
+git clone git@github.com:nodejs/node.git
+cd node
+git checkout v6.2.0
+./configure
+make
+sudo make install
 
 
 
