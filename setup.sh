@@ -63,15 +63,17 @@ echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
 
 # setup nodejs
-mkdir -p ~/src/github/nodejs
-cd ~/src/github/nodejs
-git clone git@github.com:nodejs/node.git
-cd node
-git checkout v6.2.0
-./configure
-make
-sudo make install
+curl -O https://nodejs.org/dist/v4.4.4/node-v4.4.4-linux-x64.tar.xz
+tar xvf node-v4.4.4-linux-x64.tar.xz
+cd node-v4.4.4-linux-x64
+sudo cp -R bin /usr/local/
+sudo cp -R include /usr/local/
+sudo cp -R lib /usr/local/
+sudo cp -R share /usr/local/
 
+# setup some node tools
+sudo npm install -g npm
+sudo npm install -g gulp eslint coffee
 
 
 exit
