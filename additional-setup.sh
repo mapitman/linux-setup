@@ -1,8 +1,8 @@
 #!/bin/sh
 sudo su
 
-# install some build tools and the Broadcom WiFi driver for MacBooks
-apt-get install build-essential autoconf autogen libtool flex bison bcmwl-kernel-source
+# install some build tools
+apt-get install build-essential autoconf autogen libtool flex bison
 
 # install unity tweak tool
 apt-get install unity-tweak-tool
