@@ -64,8 +64,8 @@ echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
 
 # setup nodejs
 curl -O https://nodejs.org/dist/v4.4.4/node-v4.4.4-linux-x64.tar.xz
-tar xvf node-v4.4.4-linux-x64.tar.xz
-cd node-v4.4.4-linux-x64
+tar xvf node-v4.4.7-linux-x64.tar.xz
+cd node-v4.4.7-linux-x64
 sudo cp -R bin /usr/local/
 sudo cp -R include /usr/local/
 sudo cp -R lib /usr/local/
