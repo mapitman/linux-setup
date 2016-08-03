@@ -3,7 +3,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 # install necessary packages
-sudo apt-get install mercurial curl vim-nox ctags
+sudo apt-get -y install mercurial curl vim-nox ctags
 
 # Change Oh My Zsh theme
 sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
@@ -22,8 +22,8 @@ echo alias github=\"cd ~/src/github\" >> ~/.zshrc
 echo alias bitbucket=\"cd ~/src/bitbucket\" >> ~/.zshrc
 
 # Setup Golang
-curl -O https://storage.googleapis.com/golang/go1.5.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.5.linux-amd64.tar.gz
+curl -O https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
 mkdir ~/go
 mkdir ~/go/bin
 mkdir ~/go/pkg
@@ -57,7 +57,7 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete
 git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-git clone https://github.com/digitaltoad/vim-jade.git ~/.vim/bundle/vim-jade
+git clone https://github.com/digitaltoad/vim-pug.git ~/.vim/bundle/vim-pug
 git clone https://github.com/mustache/vim-mustache-handlebars.git ~/.vim/bundle/vim-mustache-handlebars
 echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
