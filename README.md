@@ -5,7 +5,7 @@ This is focused on using zsh, Vim, Golang and Docker in Ubuntu Linux.
 ## Installation
 We need a few packages to be installed before running the setup script
 ```
-sudo apt-get install curl git zsh
+sudo apt-get -y install curl git zsh
 ```
 ### Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 ```
