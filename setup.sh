@@ -22,8 +22,8 @@ echo alias github=\"cd ~/src/github\" >> ~/.zshrc
 echo alias bitbucket=\"cd ~/src/bitbucket\" >> ~/.zshrc
 
 # Setup Golang
-curl -O https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
+curl -O https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.7.linux-amd64.tar.gz
 mkdir ~/go
 mkdir ~/go/bin
 mkdir ~/go/pkg
