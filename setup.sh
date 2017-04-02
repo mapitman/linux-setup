@@ -63,9 +63,9 @@ echo export EDITOR=\"vim\" >> ~/.zshrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
 
 # setup nodejs
-curl -O https://nodejs.org/dist/v4.4.7/node-v4.4.7-linux-x64.tar.xz
-tar xvf node-v4.4.7-linux-x64.tar.xz
-cd node-v4.4.7-linux-x64
+curl -O https://nodejs.org/dist/v6.10.1/node-v6.10.1-linux-x64.tar.xz
+tar xvf node-v6.10.1-linux-x64.tar.xz
+cd node-v6.10.1-linux-x64
 sudo cp -R bin /usr/local/
 sudo cp -R include /usr/local/
 sudo cp -R lib /usr/local/
