@@ -19,8 +19,8 @@ echo alias github=\"cd ~/src/github\" >> ~/.bashrc
 echo alias bitbucket=\"cd ~/src/gitlab\" >> ~/.bashrc
 
 # Setup Golang
-curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.8.linux-amd64.tar.gz
+curl -O https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz
 mkdir ~/go
 mkdir ~/go/bin
 mkdir ~/go/pkg
