@@ -4,9 +4,6 @@ sudo su
 # install some build tools
 apt -y install build-essential autoconf autogen libtool flex bison
 
-# install unity tweak tool
-apt -y install unity-tweak-tool
-
 # install tlp for power management
 apt -y install tlp
 tlp start
