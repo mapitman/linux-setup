@@ -1,16 +1,13 @@
 # linux-setup
 Scripts for getting my linux environment set up from scratch.  
-This is focused on using zsh, Vim, Golang and Docker in Ubuntu Linux.
+This is focused on using bash, Vim, Golang and Docker in Ubuntu Linux.
 
 ## Installation
 We need a few packages to be installed before running the setup script
 ```
-sudo apt-get -y install curl git zsh
+sudo apt-get -y install curl git
 ```
-### Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
-```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
+
 ### Install [Docker](https://www.docker.com/)
 ```
 sh -c "$(curl -sSL https://get.docker.com/)"
