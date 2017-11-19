@@ -3,23 +3,20 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 # install necessary packages
-sudo apt-get -y install mercurial curl vim-nox ctags
-
-# Change Oh My Zsh theme
-sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"bira\"/g' ~/.zshrc
+sudo apt-get -y install mercurial curl vim-nox ctags git-extras
 
 # Add some directories for source code
 mkdir ~/src
 mkdir ~/src/github
-mkdir ~/src/bitbucket
+mkdir ~/src/gitlab
 
 # Add some aliases
-echo alias ll=\"ls -l\" >> ~/.zshrc                                                            
-echo alias cd=\"pushd\"  >> ~/.zshrc
-echo alias pd=\"popd\"  >> ~/.zshrc
-echo alias zshrc=\"vim ~/.zshrc\"  >> ~/.zshrc
-echo alias github=\"cd ~/src/github\" >> ~/.zshrc
-echo alias bitbucket=\"cd ~/src/bitbucket\" >> ~/.zshrc
+echo alias ll=\"ls -l\" >> ~/.bashrc                                                            
+echo alias cd=\"pushd\"  >> ~/.bashrc
+echo alias pd=\"popd\"  >> ~/.bashrc
+echo alias bashrc=\"vim ~/.bashrc\"  >> ~/.bashrc
+echo alias github=\"cd ~/src/github\" >> ~/.bashrc
+echo alias bitbucket=\"cd ~/src/gitlab\" >> ~/.bashrc
 
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
@@ -28,8 +25,8 @@ mkdir ~/go
 mkdir ~/go/bin
 mkdir ~/go/pkg
 mkdir ~/go/src
-echo export GOPATH=\"\$HOME/go\" >> ~/.zshrc
-echo export PATH=\"\$PATH:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.zshrc
+echo export GOPATH=\"\$HOME/go\" >> ~/.bashrc
+echo export PATH=\"\$PATH:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.bashrc
 export GOPATH="$HOME/go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 go get -u github.com/jstemmer/gotags
@@ -59,13 +56,13 @@ git clone https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/digitaltoad/vim-pug.git ~/.vim/bundle/vim-pug
 git clone https://github.com/mustache/vim-mustache-handlebars.git ~/.vim/bundle/vim-mustache-handlebars
-echo export EDITOR=\"vim\" >> ~/.zshrc
-echo export VISUAL=\"\$EDITOR\" >> ~/.zshrc
+echo export EDITOR=\"vim\" >> ~/.bashrc
+echo export VISUAL=\"\$EDITOR\" >> ~/.bashrc
 
 # setup nodejs
-curl -O https://nodejs.org/dist/v6.10.1/node-v6.10.1-linux-x64.tar.xz
-tar xvf node-v6.10.1-linux-x64.tar.xz
-cd node-v6.10.1-linux-x64
+curl -O https://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-x64.tar.xz
+tar xvf node-v8.9.1-linux-x64.tar.xz
+cd node-v8.9.1-linux-x64
 sudo cp -R bin /usr/local/
 sudo cp -R include /usr/local/
 sudo cp -R lib /usr/local/
