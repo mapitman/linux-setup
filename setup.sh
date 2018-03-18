@@ -15,6 +15,9 @@ mkdir ~/src/gitlab
 mkdir ~/src/work
 mkdir ~/bin
 
+# Setup case-insensitive tab completion
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+echo 'set completion-ignore-case On' >> ~/.inputrc
 
 # Add some aliases
 echo alias ll=\"ls -l\" >> ~/.bashrc                                                            
