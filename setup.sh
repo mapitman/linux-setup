@@ -93,4 +93,5 @@ git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --d
 echo GIT_PROMPT_ONLY_IN_REPO=1 >> ~/.bashrc
 echo source ~/.bash-git-prompt/gitprompt.sh >> ~/.bashrc
 
+sudo snap install vscode --classic
 exit
