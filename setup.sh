@@ -11,9 +11,9 @@ sudo usermod -aG docker $USER
 
 # Add some directories
 mkdir -p ~/src/github
-mkdir ~/src/gitlab
-mkdir ~/src/work
-mkdir ~/bin
+mkdir -p ~/src/gitlab
+mkdir -p ~/src/work
+mkdir -p ~/bin
 
 # Setup case-insensitive tab completion
 if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
@@ -32,10 +32,10 @@ echo source /usr/share/autojump/autojump.sh >> ~/.bashrc
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.10.linux-amd64.tar.gz
-mkdir ~/go
-mkdir ~/go/bin
-mkdir ~/go/pkg
-mkdir ~/go/src
+mkdir -p ~/go
+mkdir -p ~/go/bin
+mkdir -p ~/go/pkg
+mkdir -p ~/go/src
 echo export GOPATH=\"\$HOME/go\" >> ~/.bashrc
 echo export PATH=\"\$PATH:\$HOME/bin:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.bashrc
 export GOPATH="$HOME/go"
@@ -57,9 +57,9 @@ if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
 fi
 curl -Lo ~/.vimrc https://raw.githubusercontent.com/mapitman/linux-setup/master/vimrc
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+mkdir -p -p ~/.vim/autoload ~/.vim/bundle && \
 curl -Lo ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-mkdir -p ~/.vim/colors && \
+mkdir -p -p ~/.vim/colors && \
 curl -Lo ~/.vim/colors/atom-dark-256.vim https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim/bundle/neocomplete
