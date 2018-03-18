@@ -15,6 +15,7 @@ mkdir ~/src/gitlab
 mkdir ~/src/work
 mkdir ~/bin
 
+
 # Add some aliases
 echo alias ll=\"ls -l\" >> ~/.bashrc                                                            
 echo alias bashrc=\"vim ~/.bashrc && source ~/.bashrc\"  >> ~/.bashrc
@@ -86,5 +87,10 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsof
 sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install -y dotnet-sdk-2.1.101
+
+# setup bash-git-prompt
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+echo GIT_PROMPT_ONLY_IN_REPO=1 >> ~/.bashrc
+echo source ~/.bash-git-prompt/gitprompt.sh >> ~/.bashrc
 
 exit
