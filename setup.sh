@@ -3,16 +3,17 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 # install necessary packages
-sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump build-essential autoconf autogen libtool flex bison
+sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump \
+build-essential autoconf autogen libtool flex bison openconnect
 
 # add current user to docker group
 sudo usermod -aG docker $USER
 
-# Add some directories for source code
-mkdir ~/src
-mkdir ~/src/github
+# Add some directories
+mkdir -p ~/src/github
 mkdir ~/src/gitlab
 mkdir ~/src/work
+mkdir ~/bin
 
 # Add some aliases
 echo alias ll=\"ls -l\" >> ~/.bashrc                                                            
@@ -31,7 +32,7 @@ mkdir ~/go/bin
 mkdir ~/go/pkg
 mkdir ~/go/src
 echo export GOPATH=\"\$HOME/go\" >> ~/.bashrc
-echo export PATH=\"\$PATH:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.bashrc
+echo export PATH=\"\$PATH:\$HOME/bin:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.bashrc
 export GOPATH="$HOME/go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 go get -u github.com/jstemmer/gotags
