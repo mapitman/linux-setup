@@ -16,6 +16,8 @@ echo alias ll=\"ls -l\" >> ~/.bashrc
 echo alias bashrc=\"vim ~/.bashrc\"  >> ~/.bashrc
 echo alias github=\"cd ~/src/github\" >> ~/.bashrc
 echo alias gitlab=\"cd ~/src/gitlab\" >> ~/.bashrc
+echo alias work=\"cd ~/src/work\" >> ~/.bashrc
+
 
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz
