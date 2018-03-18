@@ -59,7 +59,7 @@ echo export EDITOR=\"vim\" >> ~/.bashrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.bashrc
 
 # setup nodejs
-curl -O https://nodejs.org/dist/v8.9.1/node-v8.10.0-linux-x64.tar.xz
+curl -O https://nodejs.org/dist/v8.10.0/node-v8.10.0-linux-x64.tar.xz
 tar xvf node-v8.10.0-linux-x64.tar.xz
 cd node-v8.10.0-linux-x64
 sudo cp -R bin /usr/local/
