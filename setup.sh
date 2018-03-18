@@ -3,7 +3,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 # install necessary packages
-sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump
+sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump build-essential autoconf autogen libtool flex bison
 
 # Add some directories for source code
 mkdir ~/src
