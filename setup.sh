@@ -21,6 +21,7 @@ echo alias bashrc=\"vim ~/.bashrc && source ~/.bashrc\"  >> ~/.bashrc
 echo alias github=\"cd ~/src/github\" >> ~/.bashrc
 echo alias gitlab=\"cd ~/src/gitlab\" >> ~/.bashrc
 echo alias work=\"cd ~/src/work\" >> ~/.bashrc
+echo alias h=\"cd ~\" >> ~/.bashrc
 echo source /usr/share/autojump/autojump.sh >> ~/.bashrc
 
 
