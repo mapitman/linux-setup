@@ -13,7 +13,7 @@ mkdir ~/src/work
 
 # Add some aliases
 echo alias ll=\"ls -l\" >> ~/.bashrc                                                            
-echo alias bashrc=\"vim ~/.bashrc\"  >> ~/.bashrc
+echo alias bashrc=\"vim ~/.bashrc && source ~/.bashrc\"  >> ~/.bashrc
 echo alias github=\"cd ~/src/github\" >> ~/.bashrc
 echo alias gitlab=\"cd ~/src/gitlab\" >> ~/.bashrc
 echo alias work=\"cd ~/src/work\" >> ~/.bashrc
