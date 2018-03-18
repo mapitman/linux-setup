@@ -4,7 +4,7 @@ normal=$(tput sgr0)
 
 # install necessary packages
 sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump \
-build-essential autoconf autogen libtool flex bison openconnect xclip
+build-essential autoconf autogen libtool flex bison openconnect xclip pwgen
 
 # add current user to docker group
 sudo usermod -aG docker $USER
@@ -15,6 +15,9 @@ mkdir ~/src/gitlab
 mkdir ~/src/work
 mkdir ~/bin
 
+# Setup case-insensitive tab completion
+if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+echo 'set completion-ignore-case On' >> ~/.inputrc
 
 # Add some aliases
 echo alias ll=\"ls -l\" >> ~/.bashrc                                                            
