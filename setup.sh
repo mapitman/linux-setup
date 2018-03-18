@@ -3,24 +3,23 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 # install necessary packages
-sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io
+sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump
 
 # Add some directories for source code
 mkdir ~/src
 mkdir ~/src/github
 mkdir ~/src/gitlab
+mkdir ~/src/work
 
 # Add some aliases
 echo alias ll=\"ls -l\" >> ~/.bashrc                                                            
-echo alias cd=\"pushd\"  >> ~/.bashrc
-echo alias pd=\"popd\"  >> ~/.bashrc
 echo alias bashrc=\"vim ~/.bashrc\"  >> ~/.bashrc
 echo alias github=\"cd ~/src/github\" >> ~/.bashrc
-echo alias bitbucket=\"cd ~/src/gitlab\" >> ~/.bashrc
+echo alias gitlab=\"cd ~/src/gitlab\" >> ~/.bashrc
 
 # Setup Golang
-curl -O https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz
+curl -O https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.10.linux-amd64.tar.gz
 mkdir ~/go
 mkdir ~/go/bin
 mkdir ~/go/pkg
@@ -60,9 +59,9 @@ echo export EDITOR=\"vim\" >> ~/.bashrc
 echo export VISUAL=\"\$EDITOR\" >> ~/.bashrc
 
 # setup nodejs
-curl -O https://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-x64.tar.xz
-tar xvf node-v8.9.1-linux-x64.tar.xz
-cd node-v8.9.1-linux-x64
+curl -O https://nodejs.org/dist/v8.9.1/node-v8.10.0-linux-x64.tar.xz
+tar xvf node-v8.10.0-linux-x64.tar.xz
+cd node-v8.10.0-linux-x64
 sudo cp -R bin /usr/local/
 sudo cp -R include /usr/local/
 sudo cp -R lib /usr/local/
@@ -72,5 +71,12 @@ sudo cp -R share /usr/local/
 sudo npm install -g npm
 sudo npm install -g gulp eslint coffee
 
+# Setup dotnet core
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.1.101
 
 exit
