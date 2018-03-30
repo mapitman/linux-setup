@@ -5,7 +5,7 @@ sudo pacman -S --noconfirm  mercurial vim ctags docker autojump \
     autogen openconnect xclip pwgen ranger nodejs npm go dotnet-sdk
 
 sudo pacman -S --noconfirm --needed base-devel
-yaourt -S git-extras bash-git-prompt visual-studio-code-bin
+yaourt -S git-extras bash-git-prompt visual-studio-code-bin otf-fira-code
 
 # setup bash-git-prompt
 if ! grep -Fxq "GIT_PROMPT_ONLY_IN_REPO=1" ~/.bashrc
