@@ -2,7 +2,7 @@
 
 # install arch packages
 sudo pacman -S --noconfirm  mercurial vim ctags docker autojump \
-    autogen openconnect xclip pwgen ranger nodejs npm go dotnet-sdk
+    autogen openconnect xclip pwgen ranger nodejs npm go dotnet-sdk tlp ethtool smartmontools
 
 sudo pacman -S --noconfirm --needed base-devel
 yaourt -S git-extras bash-git-prompt visual-studio-code-bin otf-fira-code
