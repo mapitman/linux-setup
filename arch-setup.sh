@@ -1,0 +1,58 @@
+#!/bin/sh
+
+# install arch packages
+sudo pacman -Syu --noconfirm --needed base-devel mercurial vim ctags docker autojump \
+    autogen openconnect pwgen ranger nodejs npm go dotnet-sdk \
+    ethtool smartmontools udisks2 dialog git
+
+# install arch packages
+if ! command -v aurman >/dev/null 2>&1
+then
+    git clone --depth 1 https://aur.archlinux.org/aurman.git /tmp/aurman
+    pushd /tmp/aurman
+    makepkg -si --noconfirm
+    popd
+    rm -rf /tmp/aurman
+fi
+
+aurman -S --needed git-extras bash-git-prompt
+
+# setup bash-git-prompt
+if ! grep -Fxq "GIT_PROMPT_ONLY_IN_REPO=1" ~/.bashrc
+then
+    echo GIT_PROMPT_ONLY_IN_REPO=1 >> ~/.bashrc
+fi
+if ! grep -Fxq "source /usr/lib/bash-git-prompt/gitprompt.sh" ~/.bashrc
+then
+    echo source /usr/lib/bash-git-prompt/gitprompt.sh >> ~/.bashrc
+fi
+
+if ! grep -Fxq "source /usr/share/bash-completion/completions/git" ~/.bashrc
+then
+    echo source /usr/share/bash-completion/completions/git >> ~/.bashrc
+fi
+
+if ! grep -Fxq "source /etc/bash_completion.d/git-extras" ~/.bashrc
+then
+    echo source /etc/bash_completion.d/git-extras >> ~/.bashrc
+fi
+
+read -p "Install power management tools? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    aurman -S  --needed tlp
+    echo "Configuring power management services..."
+    sudo systemctl enable tlp.service
+    sudo systemctl enable tlp-sleep.service
+    sudo systemctl mask systemd-rfkill.service
+    sudo systemctl mask systemd-rfkill.socket
+fi
+
+read -p "Install graphical desktop? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "Installing Gnome and other graphical applications..."
+    aurman -S --needed gnome visual-studio-code-bin otf-fira-code xclip network-manager-applet
+fi
