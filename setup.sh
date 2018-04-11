@@ -15,17 +15,20 @@ else
 fi
 
 # distro independent changes
-
 # add current user to docker group
+echo "Adding current user to docker group..."
 sudo usermod -aG docker $USER
 
 # Add some directories
+echo "Setting up source directories..."
+
 mkdir -p ~/src/github
 mkdir -p ~/src/gitlab
 mkdir -p ~/src/work
 mkdir -p ~/bin
 
 # Setup case-insensitive tab completion
+echo "Setting up case-insensitive bash completion..."
 if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
 if ! grep -Fxq "set completion-ignore-case On" ~/.inputrc
 then
@@ -35,9 +38,11 @@ fi
 # backup .bashrc file
 if [ -f ~/.bashrc ]
 then
+    echo "Backing up .bashrc..."
     cp ~/.bashrc ~/.bashrc.orig
 fi
 
+echo "Configuring .bashrc..."
 # Add some aliases
 if ! grep -Fxq "alias ll=\"ls -l\"" ~/.bashrc
 then
@@ -82,20 +87,22 @@ then
     echo PATH=\"\$PATH:\$HOME/bin:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.bashrc
 fi
 
+echo "Installing extra golang tools..."
 GOPATH="$HOME/go"
 PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
-go get -u github.com/jstemmer/gotags
-go get -u github.com/nsf/gocode
-go get -u golang.org/x/tools/cmd/goimports
-go get -u github.com/rogpeppe/godef
-go get -u golang.org/x/tools/cmd/guru
-go get -u golang.org/x/tools/cmd/gorename
-go get -u github.com/golang/lint/golint
-go get -u github.com/kisielk/errcheck
+go get -v -u github.com/jstemmer/gotags
+go get -v -u github.com/nsf/gocode
+go get -v -u golang.org/x/tools/cmd/goimports
+go get -v -u github.com/rogpeppe/godef
+go get -v -u golang.org/x/tools/cmd/guru
+go get -v -u golang.org/x/tools/cmd/gorename
+go get -v -u github.com/golang/lint/golint
+go get -v -u github.com/kisielk/errcheck
 
 ## Setup vim only if the folders don't exist
 if [ ! -d ~/.vim/autoload ] && [ ! -d ~/.vim/bundle ]
 then
+    echo "Configuring vim..."
     if [ -f ~/.vimrc ] || [ -h ~/.vimrc ]; then
     echo "\033[0;33mFound ~/.vimrc.\033[0m \033[0;32mBacking up to ~/vimrc.old\033[0m";
     mv ~/.vimrc ~/vimrc.old;
@@ -122,8 +129,7 @@ sed -i '/^VISUAL=/d' ~/.bashrc
 echo VISUAL=\"\$EDITOR\" >> ~/.bashrc
 
 
-# setup some node tools
-sudo npm install -g npm
-sudo npm install -g gulp eslint coffee
-
-
+echo "Setting up node.js tools..."
+# npm 5.8 has bugs, downgrade it
+sudo npm install -g npm@5.7.1
+sudo npm install -g gulp eslint
