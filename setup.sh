@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # source distro dependent file
 if grep -Fq "ubuntu" /etc/os-release
@@ -73,31 +73,7 @@ then
     echo source /usr/share/autojump/autojump.bash >> ~/.bashrc
 fi
 
-# Setup Golang paths and extra tools
-mkdir -p ~/go
-mkdir -p ~/go/bin
-mkdir -p ~/go/pkg
-mkdir -p ~/go/src
-if ! grep -Fxq "GOPATH=\"\$HOME/go\"" ~/.bashrc
-then
-    echo GOPATH=\"\$HOME/go\" >> ~/.bashrc
-fi
-if ! grep -Fxq "PATH=\"\$PATH:\$HOME/bin:/usr/local/go/bin:\$GOPATH/bin\"" ~/.bashrc
-then
-    echo PATH=\"\$PATH:\$HOME/bin:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.bashrc
-fi
 
-echo "Installing extra golang tools..."
-GOPATH="$HOME/go"
-PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
-go get -v -u github.com/jstemmer/gotags
-go get -v -u github.com/nsf/gocode
-go get -v -u golang.org/x/tools/cmd/goimports
-go get -v -u github.com/rogpeppe/godef
-go get -v -u golang.org/x/tools/cmd/guru
-go get -v -u golang.org/x/tools/cmd/gorename
-go get -v -u github.com/golang/lint/golint
-go get -v -u github.com/kisielk/errcheck
 
 ## Setup vim only if the folders don't exist
 if [ ! -d ~/.vim/autoload ] && [ ! -d ~/.vim/bundle ]
@@ -129,7 +105,4 @@ sed -i '/^VISUAL=/d' ~/.bashrc
 echo VISUAL=\"\$EDITOR\" >> ~/.bashrc
 
 
-echo "Setting up node.js tools..."
-# npm 5.8 has bugs, downgrade it
-sudo npm install -g npm@5.7.1
-sudo npm install -g gulp eslint
+

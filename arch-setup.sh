@@ -2,10 +2,33 @@
 
 # install arch packages
 sudo pacman -Syu --noconfirm --needed base-devel mercurial vim ctags docker autojump \
-    autogen openconnect pwgen ranger nodejs npm go dotnet-sdk \
+    autogen openconnect pwgen ranger \
     ethtool smartmontools udisks2 dialog git
 
-# install arch packages
+read -p "Install golang and related tools? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo pacman -S --noconfirm --needed go
+    source ./golang.sh
+fi
+
+read -p "Install node.js and related tools? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo pacman -S --noconfirm --needed nodejs npm
+    source ./nodejs.sh
+fi
+
+read -p "Install dotnet core sdk and related tools? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo pacman -S --noconfirm --needed dotnet-sdk
+fi
+
+# install AUR packages
 if ! command -v aurman >/dev/null 2>&1
 then
     git clone --depth 1 https://aur.archlinux.org/aurman.git /tmp/aurman
@@ -54,5 +77,5 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "Installing Gnome and other graphical applications..."
-    aurman -S --needed gnome visual-studio-code-bin otf-fira-code xclip network-manager-applet
+    aurman -S --needed gnome visual-studio-code-bin otf-fira-code xclip network-manager-applet freerdp remmina libvncserver gpmdp
 fi
