@@ -38,7 +38,7 @@ then
     rm -rf /tmp/aurman
 fi
 
-aurman -S --needed git-extras bash-git-prompt yadm 
+aurman -S --noconfirm --needed git-extras bash-git-prompt yadm 
 
 # setup bash-git-prompt
 if ! grep -Fxq "GIT_PROMPT_ONLY_IN_REPO=1" ~/.bashrc
@@ -64,7 +64,7 @@ read -p "Install power management tools? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    aurman -S  --needed tlp
+    aurman -S --noconfirm --needed tlp
     echo "Configuring power management services..."
     sudo systemctl enable tlp.service
     sudo systemctl enable tlp-sleep.service
@@ -83,16 +83,17 @@ then
         aurman -S --needed --noconfirm gnome network-manager-applet \
         gnome-tweaks numix-circle-icon-theme-git numix-icon-theme-git \
         numix-square-icon-theme-git 
-        sudo systemctl enable gdm.service
     fi
 
     read -p "Install i3 window manager?" -n 1 -r
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
-        aurman -S i3-gaps i3blocks i3lock i3status i3bar dmenu
+        aurman -S --needed --noconfirm i3-gaps i3blocks i3lock i3status dmenu acpi bc lm_sensors \
+        playerctl alsa-utils sysstat
     fi
 
-    aurman -S visual-studio-code-bin otf-fira-code xclip \
-    freerdp remmina libvncserver gpmdp chromium signal maim 
-    sudo systemctl enable lightdm.service
+    aurman -S --needed --noconfirm visual-studio-code-bin otf-fira-code xclip \
+    freerdp remmina libvncserver gpmdp chromium signal maim tk gdm
+    sudo systemctl enable gdm.service
+    sudo systemctl start gdm.service
 fi
