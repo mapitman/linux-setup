@@ -52,15 +52,15 @@ if ! grep -Fxq "alias bashrc=\"vim ~/.bashrc && source ~/.bashrc\"" ~/.bashrc
 then      
     echo "alias bashrc=\"vim ~/.bashrc && source ~/.bashrc\""  >> ~/.bashrc
 fi
-if ! grep -Fxq "alias github=\"cd ~/src/github\"" ~/.bashrc
+if ! grep -Fq "alias github" ~/.bashrc
 then
     echo alias github=\"cd ~/src/github\" >> ~/.bashrc
 fi
-if ! grep -Fxq "alias gitlab=\"cd ~/src/gitlab\"" ~/.bashrc
+if ! grep -Fq "alias gitlab" ~/.bashrc
 then
     echo alias gitlab=\"cd ~/src/gitlab\" >> ~/.bashrc
 fi
-if ! grep -Fxq "alias work=\"cd ~/src/work\"" ~/.bashrc
+if ! grep -Fq "alias work" ~/.bashrc
 then
     echo alias work=\"cd ~/src/work\" >> ~/.bashrc
 fi
@@ -103,6 +103,3 @@ sed -i '/^EDITOR=/d' ~/.bashrc
 echo EDITOR=\"vim\" >> ~/.bashrc
 sed -i '/^VISUAL=/d' ~/.bashrc
 echo VISUAL=\"\$EDITOR\" >> ~/.bashrc
-
-
-

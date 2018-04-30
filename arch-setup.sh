@@ -2,7 +2,7 @@
 
 # install arch packages
 sudo pacman -Syu --noconfirm --needed base-devel mercurial vim ctags docker autojump \
-    autogen openconnect pwgen ranger \
+    autogen openconnect pwgen ranger bind-tools \
     ethtool smartmontools udisks2 dialog git
 
 read -p "Install golang and related tools? " -n 1 -r
@@ -38,7 +38,7 @@ then
     rm -rf /tmp/aurman
 fi
 
-aurman -S --needed git-extras bash-git-prompt
+aurman -S --needed git-extras bash-git-prompt yadm 
 
 # setup bash-git-prompt
 if ! grep -Fxq "GIT_PROMPT_ONLY_IN_REPO=1" ~/.bashrc
@@ -76,6 +76,23 @@ read -p "Install graphical desktop? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    echo "Installing Gnome and other graphical applications..."
-    aurman -S --needed gnome visual-studio-code-bin otf-fira-code xclip network-manager-applet freerdp remmina libvncserver gpmdp
+
+    read -p "Install Gnome desktop environment?" -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        aurman -S --needed --noconfirm gnome network-manager-applet \
+        gnome-tweaks numix-circle-icon-theme-git numix-icon-theme-git \
+        numix-square-icon-theme-git 
+        sudo systemctl enable gdm.service
+    fi
+
+    read -p "Install i3 window manager?" -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]
+    then
+        aurman -S i3-gaps i3blocks i3lock i3status i3bar dmenu
+    fi
+
+    aurman -S visual-studio-code-bin otf-fira-code xclip \
+    freerdp remmina libvncserver gpmdp chromium signal maim 
+    sudo systemctl enable lightdm.service
 fi
