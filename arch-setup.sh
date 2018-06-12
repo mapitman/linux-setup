@@ -38,27 +38,7 @@ then
     rm -rf /tmp/aurman
 fi
 
-aurman -S --noconfirm --needed git-extras bash-git-prompt yadm 
-
-# setup bash-git-prompt
-if ! grep -Fxq "GIT_PROMPT_ONLY_IN_REPO=1" ~/.bashrc
-then
-    echo GIT_PROMPT_ONLY_IN_REPO=1 >> ~/.bashrc
-fi
-if ! grep -Fxq "source /usr/lib/bash-git-prompt/gitprompt.sh" ~/.bashrc
-then
-    echo source /usr/lib/bash-git-prompt/gitprompt.sh >> ~/.bashrc
-fi
-
-if ! grep -Fxq "source /usr/share/bash-completion/completions/git" ~/.bashrc
-then
-    echo source /usr/share/bash-completion/completions/git >> ~/.bashrc
-fi
-
-if ! grep -Fxq "source /etc/bash_completion.d/git-extras" ~/.bashrc
-then
-    echo source /etc/bash_completion.d/git-extras >> ~/.bashrc
-fi
+aurman -S --noconfirm --needed git-extras bash-git-prompt yadm-git 
 
 read -p "Install power management tools? " -n 1 -r
 echo
@@ -72,7 +52,7 @@ then
     sudo systemctl mask systemd-rfkill.socket
 fi
 
-read -p "Install graphical desktop? " -n 1 -r
+read -p "Install graphical apps? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -83,6 +63,8 @@ then
         aurman -S --needed --noconfirm gnome network-manager-applet \
         gnome-tweaks numix-circle-icon-theme-git numix-icon-theme-git \
         numix-square-icon-theme-git 
+        sudo systemctl enable gdm.service
+        sudo systemctl start gdm.service
     fi
 
     read -p "Install i3 window manager?" -n 1 -r
@@ -90,10 +72,10 @@ then
     then
         aurman -S --needed --noconfirm i3-gaps i3blocks i3lock i3status dmenu acpi bc lm_sensors \
         playerctl alsa-utils sysstat
+        sudo systemctl enable gdm.service
+        sudo systemctl start gdm.service
     fi
 
     aurman -S --needed --noconfirm visual-studio-code-bin otf-fira-code xclip \
     freerdp remmina libvncserver gpmdp chromium signal maim tk gdm
-    sudo systemctl enable gdm.service
-    sudo systemctl start gdm.service
 fi
