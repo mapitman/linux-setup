@@ -33,7 +33,7 @@ if ! command -v aurman >/dev/null 2>&1
 then
     git clone --depth 1 https://aur.archlinux.org/aurman.git /tmp/aurman
     pushd /tmp/aurman
-    makepkg -si --noconfirm
+    makepkg -si --noconfirm --skippgpcheck
     popd
     rm -rf /tmp/aurman
 fi
@@ -63,19 +63,11 @@ then
         aurman -S --needed --noconfirm gnome network-manager-applet \
         gnome-tweaks numix-circle-icon-theme-git numix-icon-theme-git \
         numix-square-icon-theme-git 
-        sudo systemctl enable gdm.service
-        sudo systemctl start gdm.service
-    fi
-
-    read -p "Install i3 window manager?" -n 1 -r
-    if [[ $REPLY =~ ^[Yy]$ ]]
-    then
-        aurman -S --needed --noconfirm i3-gaps i3blocks i3lock i3status dmenu acpi bc lm_sensors \
-        playerctl alsa-utils sysstat
-        sudo systemctl enable gdm.service
-        sudo systemctl start gdm.service
     fi
 
     aurman -S --needed --noconfirm visual-studio-code-bin otf-fira-code xclip \
-    freerdp remmina libvncserver gpmdp chromium signal maim tk gdm
+    freerdp remmina libvncserver gpmdp google-chrome keybase keybase-gui signal maim tk gdm
+
+    sudo systemctl enable gdm.service
+    sudo systemctl start gdm.service
 fi
