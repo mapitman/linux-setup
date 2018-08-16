@@ -2,7 +2,7 @@
 
 # install necessary packages
 sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump \
-build-essential autoconf autogen libtool flex bison openconnect xclip pwgen ranger dialog yadm
+build-essential autoconf autogen libtool flex bison openconnect xclip pwgen ranger dialog yadm fonts-firacode
 
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz
