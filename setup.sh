@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # source distro dependent file
 if grep -Fq "ubuntu" /etc/os-release
@@ -27,54 +27,6 @@ mkdir -p ~/src/gitlab
 mkdir -p ~/src/work
 mkdir -p ~/bin
 
-# Setup case-insensitive tab completion
-echo "Setting up case-insensitive bash completion..."
-if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
-if ! grep -Fxq "set completion-ignore-case On" ~/.inputrc
-then
-    echo 'set completion-ignore-case On' >> ~/.inputrc
-fi
-
-# backup .bashrc file
-if [ -f ~/.bashrc ]
-then
-    echo "Backing up .bashrc..."
-    cp ~/.bashrc ~/.bashrc.orig
-fi
-
-echo "Configuring .bashrc..."
-# Add some aliases
-if ! grep -Fxq "alias ll=\"ls -l\"" ~/.bashrc
-then
-    echo alias ll=\"ls -l\" >> ~/.bashrc
-fi
-if ! grep -Fxq "alias bashrc=\"vim ~/.bashrc && source ~/.bashrc\"" ~/.bashrc
-then      
-    echo "alias bashrc=\"vim ~/.bashrc && source ~/.bashrc\""  >> ~/.bashrc
-fi
-if ! grep -Fq "alias github" ~/.bashrc
-then
-    echo alias github=\"cd ~/src/github\" >> ~/.bashrc
-fi
-if ! grep -Fq "alias gitlab" ~/.bashrc
-then
-    echo alias gitlab=\"cd ~/src/gitlab\" >> ~/.bashrc
-fi
-if ! grep -Fq "alias work" ~/.bashrc
-then
-    echo alias work=\"cd ~/src/work\" >> ~/.bashrc
-fi
-if ! grep -Fxq "alias h=\"cd ~\"" ~/.bashrc
-then
-    echo alias h=\"cd ~\" >> ~/.bashrc
-fi
-if ! grep -Fxq "source /usr/share/autojump/autojump.bash" ~/.bashrc
-then
-    echo source /usr/share/autojump/autojump.bash >> ~/.bashrc
-fi
-
-
-
 ## Setup vim only if the folders don't exist
 if [ ! -d ~/.vim/autoload ] && [ ! -d ~/.vim/bundle ]
 then
@@ -98,8 +50,3 @@ then
 else
     echo "vim directories already exist, skipped setting up vim"
 fi
-
-sed -i '/^EDITOR=/d' ~/.bashrc
-echo EDITOR=\"vim\" >> ~/.bashrc
-sed -i '/^VISUAL=/d' ~/.bashrc
-echo VISUAL=\"\$EDITOR\" >> ~/.bashrc

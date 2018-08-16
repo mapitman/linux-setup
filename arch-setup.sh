@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # install arch packages
 sudo pacman -Syu --noconfirm --needed base-devel mercurial vim ctags docker autojump \
