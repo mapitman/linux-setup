@@ -43,3 +43,9 @@ curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.de
 sudo dpkg -i --force-depends ./google-chrome-stable_current_amd64.deb
 sudo apt install -f
 rm google-chrome-stable_current_amd64.deb
+
+curl -O https://prerelease.keybase.io/keybase_amd64.deb
+sudo dpkg -i keybase_amd64.deb
+sudo apt-get install -f
+run_keybase
+rm keybase_amd64.deb
