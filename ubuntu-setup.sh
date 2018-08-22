@@ -2,7 +2,8 @@
 
 # install necessary packages
 sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump \
-build-essential autoconf autogen libtool flex bison openconnect xclip pwgen ranger dialog yadm fonts-firacode python-pip
+build-essential autoconf autogen libtool flex bison openconnect xclip pwgen ranger \
+dialog yadm fonts-firacode python-pip pylint pandoc
 
 # Setup Golang
 curl -O https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz
@@ -49,3 +50,5 @@ sudo dpkg -i keybase_amd64.deb
 sudo apt-get install -f
 run_keybase
 rm keybase_amd64.deb
+
+pip install pypandoc twine autopep8
