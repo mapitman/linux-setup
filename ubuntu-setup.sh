@@ -9,6 +9,8 @@ dialog yadm fonts-firacode python-pip pylint pandoc
 curl -O https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.10.linux-amd64.tar.gz
 rm go1.10.linux-amd64.tar.gz
+source ./golang.sh
+
 
 # setup nodejs
 curl -O https://nodejs.org/dist/v8.10.0/node-v8.10.0-linux-x64.tar.xz
