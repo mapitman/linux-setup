@@ -6,9 +6,10 @@ build-essential autoconf autogen libtool flex bison openconnect xclip pwgen rang
 dialog yadm fonts-firacode python-pip pylint pandoc
 
 # Setup Golang
-curl -O https://storage.googleapis.com/golang/go1.10.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.10.linux-amd64.tar.gz
-rm go1.10.linux-amd64.tar.gz
+gopkg=go1.11.linux-amd64.tar.gz
+curl -O https://storage.googleapis.com/golang/$gopkg
+sudo tar -C /usr/local -xzf $gopkg
+rm $gopkg
 source ./golang.sh
 
 
