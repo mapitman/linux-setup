@@ -63,4 +63,4 @@ unzip terraform_0.11.8_linux_amd64.zip -d ~/bin/
 rm $tf_package
 
 # kubectl
-source ./kubectl.sh
+sudo snap install --classic kubectl
