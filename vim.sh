@@ -50,3 +50,4 @@ then
 else 
     git clone https://github.com/maralla/completor.vim.git ~/.vim/pack/plugins/start/completor
 fi
+

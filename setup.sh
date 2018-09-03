@@ -27,3 +27,4 @@ fi
 echo "Adding current user to docker group..."
 sudo usermod -aG docker $USER
 source ./vim.sh
+

@@ -14,3 +14,4 @@ dpkg -i --force-depends ./google-chrome-stable_current_amd64.deb
 apt install -f
 
 exit
+

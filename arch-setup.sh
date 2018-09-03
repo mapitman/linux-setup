@@ -71,3 +71,4 @@ then
     sudo systemctl enable gdm.service
     sudo systemctl start gdm.service
 fi
+
