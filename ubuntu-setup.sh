@@ -64,3 +64,10 @@ rm $tf_package
 
 # kubectl
 sudo snap install --classic kubectl
+
+# minikube
+sudo apt-get install -y qemu-kvm libvirt-bin virt-top libguestfs-tools virtinst bridge-utils
+sudo modprobe vhost_net
+lsmod | grep vhost
+sudo echo vhost_net >> /etc/modules
+
