@@ -80,3 +80,10 @@ sudo apt-get install libbluray-bdj libaacs0 libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 mkdir -p ~/.config/aacs/
 curl -L -o ~/.config/aacs/KEYDB.cfg http://vlc-bluray.whoknowsmy.name/files/KEYDB.cfg
+
+
+curl -L -O https://github.com/sharkdp/bat/releases/download/v0.7.1/bat_0.7.1_amd64.deb
+sudo dpkg -i ./bat_0.7.1_amd64.deb
+rm ./bat_0.7.1_amd64.deb
+
+
