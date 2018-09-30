@@ -10,7 +10,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     sudo pacman -S --noconfirm --needed go
-    source ./golang.sh
+    source ./golang-tools.sh
 fi
 
 read -p "Install node.js and related tools? " -n 1 -r

@@ -5,14 +5,6 @@ mkdir -p ~/go
 mkdir -p ~/go/bin
 mkdir -p ~/go/pkg
 mkdir -p ~/go/src
-if ! grep -Fxq "GOPATH=\"\$HOME/go\"" ~/.bashrc
-then
-    echo GOPATH=\"\$HOME/go\" >> ~/.bashrc
-fi
-if ! grep -Fxq "PATH=\"\$PATH:\$HOME/bin:/usr/local/go/bin:\$GOPATH/bin\"" ~/.bashrc
-then
-    echo PATH=\"\$PATH:\$HOME/bin:/usr/local/go/bin:\$GOPATH/bin\" >> ~/.bashrc
-fi
 
 echo "go get -u -v extra golang tools..."
 GOPATH="$HOME/go"
@@ -38,4 +30,3 @@ go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
 go get -u -v github.com/cweill/gotests/...
 go get -u -v github.com/mapitman/beats
 go get -u -v github.com/mapitman/mdview
-
