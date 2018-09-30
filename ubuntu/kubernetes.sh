@@ -11,3 +11,4 @@ sudo modprobe vhost_net
 lsmod | grep vhost
 sudo -i
 echo vhost_net >> /etc/modules
+exit

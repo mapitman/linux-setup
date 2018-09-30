@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # tlp for power management
-apt -y install tlp
+sudo apt-get -y install tlp
 tlp start
