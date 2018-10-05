@@ -7,6 +7,7 @@ dialog yadm fonts-firacode python-pip pylint pandoc tmux
 
 sudo snap install vscode --classic
 sudo snap install slack --classic
+sudo snap install mdview
 
 for file in ./ubuntu/*.sh
 do
