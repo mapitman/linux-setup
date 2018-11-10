@@ -2,12 +2,8 @@
 
 # install necessary packages
 sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump \
-build-essential autoconf autogen libtool flex bison openconnect xclip pwgen ranger \
-dialog yadm fonts-firacode python-pip pylint pandoc tmux htop
-
-sudo snap install vscode --classic
-sudo snap install slack --classic
-sudo snap install mdview
+build-essential autoconf autogen libtool flex bison openconnect pwgen ranger \
+dialog yadm python-pip pylint pandoc tmux htop
 
 for file in ./ubuntu/*.sh
 do
@@ -15,3 +11,23 @@ do
 done
 
 source ./golang-tools.sh
+
+read -p "Install desktop apps? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    for file in ./ubuntu/desktop/*.sh
+    do
+        source $file
+    done
+fi
+
+read -p "Install laptop apps? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    for file in ./ubuntu/laptop/*.sh
+    do
+        source $file
+    done
+fi

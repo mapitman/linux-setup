@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# fonts
+sudo apt-get install -y fonts-firacode
+
