@@ -6,4 +6,5 @@ sudo dpkg -i $msftpkg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install -y dotnet-sdk-2.1
+sudo apt install -y dotnet-sdk-2.2
 rm $msftpkg
