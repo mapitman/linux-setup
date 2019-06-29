@@ -10,6 +10,11 @@ do
     source $file
 done
 
+for file in ./generic/*.sh
+do
+    source $file
+done
+
 source ./golang-tools.sh
 
 read -p "Install desktop apps? " -n 1 -r
@@ -17,6 +22,11 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     for file in ./ubuntu/desktop/*.sh
+    do
+        source $file
+    done
+
+    for file in ./generic/desktop/*.sh
     do
         source $file
     done
