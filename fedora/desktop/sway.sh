@@ -1,4 +1,5 @@
 #!/bin/bash
 
-sudo dnf install -y sway 
+sudo dnf copr enable chriscowleyunix/sway
+sudo dnf install -y sway mako
 
