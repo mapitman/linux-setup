@@ -9,6 +9,8 @@ sudo dnf install -y snapd mercurial vim ctags git-extras docker autojump \
     NetworkManager-tui light fontawesome-fonts python2-psutil \
     python2-netifaces python2-requests
 
+sudo ln -s /var/lib/snapd/snap /snap
+
 for file in ./fedora/*.sh
 do
     source $file
