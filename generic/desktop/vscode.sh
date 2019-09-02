@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo snap install vscode --classic
+sudo snap install code --classic
