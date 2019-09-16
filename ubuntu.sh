@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# update package library and current packages
+
+sudo apt-get update && sudo apt-get upgrade -y
+
 # install necessary packages
 sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump \
 build-essential autoconf autogen libtool flex bison openconnect pwgen ranger \
