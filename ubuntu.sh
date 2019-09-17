@@ -5,7 +5,7 @@
 sudo apt-get update && sudo apt-get upgrade -y
 
 # install necessary packages
-sudo apt-get -y install mercurial curl vim-nox ctags git-extras docker.io autojump \
+sudo apt-get -y install mercurial curl vim-nox ctags git-extras autojump \
 build-essential autoconf autogen libtool flex bison openconnect pwgen ranger \
 dialog yadm python-pip pylint pandoc tmux htop jq
 
