@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install obs-studio
+sudo apt install -y obs-studio
