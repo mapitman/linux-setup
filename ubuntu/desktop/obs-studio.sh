@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo snap install obs-studio
+sudo apt install obs-studio
