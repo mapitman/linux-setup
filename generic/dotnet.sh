@@ -7,3 +7,5 @@ chmod +x /tmp/dotnet-install.sh
 /tmp/dotnet-install.sh -c 2.2
 /tmp/dotnet-install.sh -c 3.0
 /tmp/dotnet-install.sh -c 3.1
+
+dotnet tool install --global PowerShell

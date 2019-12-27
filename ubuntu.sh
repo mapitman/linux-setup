@@ -15,11 +15,6 @@ do
     source $file
 done
 
-for file in ./generic/*.sh
-do
-    source $file
-done
-
 source ./golang-tools.sh
 
 read -p "Install desktop apps? " -n 1 -r

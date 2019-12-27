@@ -20,13 +20,19 @@ then
 elif grep -Fq "Fedora" /etc/os-release
 then
     echo "Detected Fedora"
-    source ./fedora.sh
+    source ./fedora/setup.sh
 else
     echo "Unable to detect distro or distro unsupported :("
     exit
 fi
 
 # distro independent changes
+
+for file in ./generic/*.sh
+do
+    source $file
+done
+
 # add current user to docker group
 echo "Adding current user to docker group..."
 sudo groupadd docker
