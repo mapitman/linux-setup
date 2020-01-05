@@ -1,9 +1,10 @@
 #!/bin/bash
+sudo add-apt-repository universe
 
 sudo apt install -y audacity libbluray-bdj libaacs0 libdvd-pkg \
 darktable evolution evolution-ews ffmpeg ffmpeg-devel \
 flameshot fonts-firacode ttf-mscorefonts-installer gimp gnome-tweaks \
-kdiff3 obs-studio xclip
+kdiff3 obs-studio xclip libavcodec-extra
 
 sudo snap install chromium
 
