@@ -12,7 +12,7 @@ mkdir -p ~/bin
 if grep -Fq "ubuntu" /etc/os-release
 then
     echo "Detected Ubuntu or Ubuntu derivative"
-    source ./ubuntu.sh
+    source ./ubuntu/setup.sh
 elif grep -Fq "arch" /etc/os-release
 then
     echo "Detected Arch or Arch derivative"
