@@ -40,3 +40,6 @@ then
     sudo apt install gnome-shell-extension-dashtodock
 fi
 
+# Install Regolith Desktop - https://regolith-linux.org
+sudo add-apt-repository -y ppa:regolith-linux/release
+sudo apt install -y regolith-desktop
