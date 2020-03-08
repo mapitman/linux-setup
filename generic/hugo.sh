@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 version="0.62.0"
 filename="hugo_${version}_Linux-64bit.tar.gz"

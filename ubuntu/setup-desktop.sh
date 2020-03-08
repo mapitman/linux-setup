@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 sudo add-apt-repository universe
 
 sudo apt install -y audacity libbluray-bdj libaacs0 libdvd-pkg \

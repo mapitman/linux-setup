@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ## Setup vim only if the folders don't exist
 echo "Configuring vim..."

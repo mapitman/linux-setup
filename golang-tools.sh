@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Setup Golang paths and extra tools
 mkdir -p ~/go

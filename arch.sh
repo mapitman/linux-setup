@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # install arch packages
 sudo pacman -Syu --noconfirm --needed base-devel mercurial vim ctags docker autojump \
@@ -38,7 +38,7 @@ then
     rm -rf /tmp/aurman
 fi
 
-aurman -S --noconfirm --needed git-extras bash-git-prompt yadm-git 
+aurman -S --noconfirm --needed git-extras bash-git-prompt yadm-git
 
 read -p "Install power management tools? " -n 1 -r
 echo
@@ -62,7 +62,7 @@ then
     then
         aurman -S --needed --noconfirm gnome network-manager-applet \
         gnome-tweaks numix-circle-icon-theme-git numix-icon-theme-git \
-        numix-square-icon-theme-git 
+        numix-square-icon-theme-git
     fi
 
     aurman -S --needed --noconfirm visual-studio-code-bin otf-fira-code xclip \

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo dnf -y upgrade
 sudo dnf install -y mercurial vim ctags git-extras docker autojump \

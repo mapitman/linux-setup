@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 curl -L -o /tmp/dotnet-install.sh https://dot.net/v1/dotnet-install.sh
 chmod +x /tmp/dotnet-install.sh
