@@ -9,7 +9,7 @@ sudo apt-get -y install mercurial curl vim-nox ctags git-extras autojump \
 build-essential autoconf autogen libtool flex bison openconnect pwgen ranger \
 dialog python-pip pylint pandoc tmux htop jq renameutils checkinstall \
 libssl-dev zlib1g-dev libcurl4-openssl-dev docker.io nmap pandoc \
-twine python-autopep8
+twine python-autopep8 silversearcher-ag
 
 # bat (cat with wings!)
 batpkg=bat_0.8.0_amd64.deb
