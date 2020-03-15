@@ -30,3 +30,4 @@ go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
 go get -u -v github.com/cweill/gotests/...
 go get -u -v github.com/mapitman/beats
 go get -u -v github.com/mapitman/mdview
+go get -u -v github.com/justjanne/powerline-go

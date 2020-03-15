@@ -6,10 +6,15 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 # install necessary packages
 sudo apt-get -y install mercurial curl vim-nox ctags git-extras autojump \
-build-essential autoconf autogen libtool flex bison openconnect pwgen ranger \
-dialog python-pip pylint pandoc tmux htop jq renameutils checkinstall \
-libssl-dev zlib1g-dev libcurl4-openssl-dev docker.io nmap pandoc \
+build-essential autoconf autogen libtool flex bison pwgen ranger \
+dialog python-pip pylint pandoc htop jq renameutils checkinstall \
+libssl-dev zlib1g-dev libcurl4-openssl-dev nmap pandoc \
 twine python-autopep8 silversearcher-ag
+
+if uname -a | grep -i -v -q Microsoft
+then
+    sudo apt-get -y install docker.io tmux openconnect
+fi
 
 # bat (cat with wings!)
 batpkg=bat_0.8.0_amd64.deb
@@ -17,8 +22,9 @@ curl -L -O https://github.com/sharkdp/bat/releases/download/v0.8.0/$batpkg
 sudo dpkg -i ./$batpkg
 rm ./$batpkg
 
-gopkg=go1.12.7.linux-amd64.tar.gz
-curl -O https://storage.googleapis.com/golang/$gopkg
+
+gopkg=go1.14.linux-amd64.tar.gz
+curl -O https://dl.google.com/go/$gopkg
 sudo tar -C /usr/local -xzf $gopkg
 rm $gopkg
 
@@ -30,18 +36,19 @@ mkdir -p ~/go/src
 
 source ./golang-tools.sh
 
-nodeversion=node-v10.13.0-linux-x64
+node_version=12.16.1
+node_file=node-v${node_version}-linux-x64
 
-curl -O "https://nodejs.org/dist/v10.13.0/${nodeversion}.tar.xz"
-tar xvf "${nodeversion}.tar.xz"
-pushd $nodeversion
+curl -O "https://nodejs.org/dist/v${node_version}/${node_file}.tar.xz"
+tar xvf "${node_file}.tar.xz"
+pushd $node_file
 sudo cp -R bin /usr/local/
 sudo cp -R include /usr/local/
 sudo cp -R lib /usr/local/
 sudo cp -R share /usr/local/
 popd
-rm "${nodeversion}.tar.xz"
-rm -rf $nodeversion
+rm "${node_file}.tar.xz"
+rm -rf $node_file
 
 # setup some node tools
 sudo npm install -g npm
