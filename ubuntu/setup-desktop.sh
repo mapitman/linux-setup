@@ -4,7 +4,8 @@ sudo add-apt-repository universe
 sudo apt install -y audacity libbluray-bdj libaacs0 libdvd-pkg \
 darktable evolution evolution-ews ffmpeg ffmpeg-devel \
 flameshot fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
-libavcodec-extra ubuntu-restricted-extras
+libavcodec-extra ubuntu-restricted-extras gnome-shell-extension-impatience \
+gnome-shell-extension-no-annoyance 
 
 # bluray/dvd
 sudo dpkg-reconfigure libdvd-pkg
