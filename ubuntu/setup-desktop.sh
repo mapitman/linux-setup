@@ -12,12 +12,12 @@ mkdir -p ~/.config/aacs/
 curl -L -o ~/.config/aacs/KEYDB.cfg http://vlc-bluray.whoknowsmy.name/files/KEYDB.cfg
 
 # keybase
-keybasepkg=keybase_amd64.deb
-curl -O https://prerelease.keybase.io/$keybasepkg
-sudo dpkg -i $keybasepkg
-sudo apt-get install -f -y
-run_keybase
-rm $keybasepkg
+# keybasepkg=keybase_amd64.deb
+# curl -O https://prerelease.keybase.io/$keybasepkg
+# sudo dpkg -i $keybasepkg
+# sudo apt-get install -f -y
+# run_keybase
+# rm $keybasepkg
 
 # slack
 curl -o /tmp/slack-desktop-4.2.0-amd64.deb  https://downloads.slack-edge.com/linux_releases/slack-desktop-4.2.0-amd64.deb
