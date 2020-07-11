@@ -32,6 +32,7 @@ else
     curl -o /tmp/vscode.deb https://az764295.vo.msecnd.net/insider/e7920dce7bfd0b707ebfc0a5379c6edd2233e475/code-insiders_1.48.0-1594382675_amd64.deb \
     && sudo dpkg -i /tmp/vscode.deb \
     && sudo apt install -fy
+    rm /tmp/vscode.deb
 fi
 
 # Install dash to dock extension for Pop!_OS
@@ -43,3 +44,11 @@ fi
 # Install Regolith Desktop - https://regolith-linux.org
 sudo add-apt-repository -y ppa:regolith-linux/release
 sudo apt install -y regolith-desktop
+
+# Install cascadia code font
+
+curl -L -o /tmp/cascadia-code.zip https://github.com/microsoft/cascadia-code/releases/download/v2007.01/CascadiaCode-2007.01.zip
+unzip -d /tmp/cascadia-code /tmp/cascadia-code.zip
+sudo cp /tmp/cascadia-code/ttf/*.ttf /usr/local/share/fonts
+rm /tmp/cascadia-code.zip
+rm -r /tmp/cascadia-code
