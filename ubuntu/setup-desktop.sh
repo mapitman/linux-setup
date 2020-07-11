@@ -29,9 +29,9 @@ if grep -Fq "Pop" /etc/os-release
 then
     sudo apt install code_1
 else
-    curl -o /tmp/vscode.deb https://az764295.vo.msecnd.net/stable/f359dd69833dd8800b54d458f6d37ab7c78df520/code_1.40.2-1574694120_amd64.deb
-    sudo dpkg -i /tmp/vscode.deb
-    sudo apt install -fy
+    curl -o /tmp/vscode.deb https://az764295.vo.msecnd.net/insider/e7920dce7bfd0b707ebfc0a5379c6edd2233e475/code-insiders_1.48.0-1594382675_amd64.deb \
+    && sudo dpkg -i /tmp/vscode.deb \
+    && sudo apt install -fy
 fi
 
 # Install dash to dock extension for Pop!_OS
