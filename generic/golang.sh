@@ -12,28 +12,55 @@ mkdir -p $HOME/go/bin
 mkdir -p $HOME/go/pkg
 mkdir -p $HOME/go/src
 
-echo "go get -u -v extra golang tools..."
 GOPATH="$HOME/go"
 PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
-go get -u -v github.com/jstemmer/gotags
-go get -u -v github.com/mdempsky/gocode
-go get -u -v golang.org/x/tools/cmd/goimports
-go get -u -v github.com/rogpeppe/godef
-go get -u -v golang.org/x/tools/cmd/guru
-go get -u -v golang.org/x/tools/cmd/gorename
-go get -u -v github.com/golang/lint/golint
-go get -u -v github.com/kisielk/errcheck
-go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
-go get -u -v github.com/ramya-rao-a/go-outline
-go get -u -v github.com/acroca/go-symbols
-go get -u -v golang.org/x/tools/cmd/godoc
-go get -u -v github.com/sqs/goreturns
-go get -u -v github.com/derekparker/delve/cmd/dlv
-go get -u -v github.com/fatih/gomodifytags
-go get -u -v github.com/haya14busa/goplay/cmd/goplay
-go get -u -v github.com/josharian/impl
-go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
-go get -u -v github.com/cweill/gotests/...
-go get -u -v github.com/mapitman/beats
-go get -u -v github.com/mapitman/mdview
-go get -u -v github.com/justjanne/powerline-go
+
+printf "installing extra golang tools"
+printf "."
+go get -u golang.org/x/lint/golint
+printf "."
+go get -u github.com/jstemmer/gotags
+printf "."
+go get -u golang.org/x/tools/cmd/goimports
+printf "."
+go get -u github.com/rogpeppe/godef
+printf "."
+go get -u golang.org/x/tools/cmd/guru
+printf "."
+go get -u golang.org/x/tools/cmd/gorename
+printf "."
+go get -u github.com/golang/lint/golint
+printf "."
+go get -u github.com/kisielk/errcheck
+printf "."
+go get -u github.com/uudashr/gopkgs/cmd/gopkgs
+printf "."
+go get -u github.com/ramya-rao-a/go-outline
+printf "."
+go get -u github.com/acroca/go-symbols
+printf "."
+go get -u golang.org/x/tools/cmd/godoc
+printf "."
+go get -u github.com/sqs/goreturns
+printf "."
+go get -u github.com/derekparker/delve/cmd/dlv
+printf "."
+go get -u github.com/fatih/gomodifytags
+printf "."
+go get -u github.com/haya14busa/goplay/cmd/goplay
+printf "."
+go get -u github.com/josharian/impl
+printf "."
+go get -u github.com/davidrjenni/reftools/cmd/fillstruct
+printf "."
+go get -u github.com/cweill/gotests/...
+printf "."
+go get -u github.com/stamblerre/gocode
+printf "."
+go get -u github.com/mapitman/beats
+printf "."
+go get -u github.com/mapitman/mdview
+printf "."
+go get -u github.com/justjanne/powerline-go
+printf "."
+printf "\n"
