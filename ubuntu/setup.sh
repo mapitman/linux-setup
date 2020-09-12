@@ -23,43 +23,16 @@ sudo dpkg -i ./$batpkg
 rm ./$batpkg
 
 
-gopkg=go1.14.linux-amd64.tar.gz
-curl -O https://dl.google.com/go/$gopkg
-sudo tar -C /usr/local -xzf $gopkg
-rm $gopkg
-
-# Setup Golang paths
-mkdir -p ~/go
-mkdir -p ~/go/bin
-mkdir -p ~/go/pkg
-mkdir -p ~/go/src
-
-source ./golang-tools.sh
-
-node_version=12.16.1
-node_file=node-v${node_version}-linux-x64
-
-curl -O "https://nodejs.org/dist/v${node_version}/${node_file}.tar.xz"
-tar xvf "${node_file}.tar.xz"
-pushd $node_file
-sudo cp -R bin /usr/local/
-sudo cp -R include /usr/local/
-sudo cp -R lib /usr/local/
-sudo cp -R share /usr/local/
-popd
-rm "${node_file}.tar.xz"
-rm -rf $node_file
-
-# setup some node tools
-sudo npm install -g npm
-sudo npm install -g gulp eslint
-
-
 read -p "Install desktop apps? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     source ./ubuntu/setup-desktop.sh
+
+    for file in ./ubuntu/desktop/*.sh
+    do
+        source $file
+    done
 
     for file in ./generic/desktop/*.sh
     do

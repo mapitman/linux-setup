@@ -3,7 +3,7 @@
 sudo dnf -y upgrade
 sudo dnf install -y mercurial vim ctags git-extras docker autojump \
     make autoconf autogen libtool flex bison openconnect pwgen ranger \
-    dialog python3-pip pylint pandoc tmux htop jq golang bat \
+    dialog python3-pip pylint pandoc tmux htop jq bat \
     python3-pypandoc twine python3-autopep8 kubernetes-client \
     NetworkManager-tui light python2-psutil \
     python2-netifaces python2-requests autojump nodejs w3m
