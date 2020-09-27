@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo dnf -y upgrade
-sudo dnf install -y mercurial vim ctags git-extras docker autojump \
+sudo dnf install -y mercurial vim ctags docker autojump \
     make autoconf autogen libtool flex bison openconnect pwgen ranger \
     dialog python3-pip pylint pandoc tmux htop jq bat \
     python3-pypandoc twine python3-autopep8 kubernetes-client \

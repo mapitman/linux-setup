@@ -38,7 +38,7 @@ then
     rm -rf /tmp/aurman
 fi
 
-aurman -S --noconfirm --needed git-extras bash-git-prompt yadm-git
+aurman -S --noconfirm --needed bash-git-prompt
 
 read -p "Install power management tools? " -n 1 -r
 echo

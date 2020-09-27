@@ -5,7 +5,7 @@
 sudo apt-get update && sudo apt-get upgrade -y
 
 # install necessary packages
-sudo apt-get -y install make mercurial curl vim-nox ctags git-extras autojump \
+sudo apt-get -y install make mercurial curl vim-nox ctags autojump \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
 libssl-dev zlib1g-dev libcurl4-openssl-dev nmap pandoc \
