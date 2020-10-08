@@ -44,6 +44,7 @@ read -p "Install laptop apps? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
+    source ./ubuntu/setup-laptop.sh
     for file in ./ubuntu/laptop/*.sh
     do
         source $file

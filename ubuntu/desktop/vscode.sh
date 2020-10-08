@@ -3,7 +3,7 @@
 # vscode
 if grep -Fq "Pop" /etc/os-release
 then
-    sudo apt install code_1
+    sudo apt install code
 else
     curl -L -o /tmp/vscode.deb https://go.microsoft.com/fwlink/?LinkID=760868 \
     && sudo dpkg -i /tmp/vscode.deb \
