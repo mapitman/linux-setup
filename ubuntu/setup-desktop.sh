@@ -18,19 +18,15 @@ then
     curl -L -o ~/.config/aacs/KEYDB.cfg http://vlc-bluray.whoknowsmy.name/files/KEYDB.cfg
 fi
 
-
-
-# slack
-curl -o /tmp/slack-desktop-4.2.0-amd64.deb  https://downloads.slack-edge.com/linux_releases/slack-desktop-4.2.0-amd64.deb
-sudo dpkg -i /tmp/slack-desktop-4.2.0-amd64.deb
-sudo apt install -fy
-
-
-
-# Install Ubuntu dock extension for Pop!_OS
+# Install Pop!_OS packages
 if grep -Fq "Pop" /etc/os-release
 then
-    sudo apt install gnome-shell-extension-ubuntu-dock
+    sudo apt install -y gnome-shell-extension-ubuntu-dock slack-desktop
+else
+    # slack
+    curl -o /tmp/slack-desktop-4.4.2-amd64.deb  https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.2-amd64.deb
+    sudo dpkg -i /tmp/slack-desktop-4.4.2-amd64.deb
+    sudo apt install -fy
 fi
 
 

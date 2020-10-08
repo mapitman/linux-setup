@@ -17,11 +17,15 @@ then
 fi
 
 # bat (cat with wings!)
-batpkg=bat_0.8.0_amd64.deb
-curl -L -O https://github.com/sharkdp/bat/releases/download/v0.8.0/$batpkg
-sudo dpkg -i ./$batpkg
-rm ./$batpkg
-
+if grep -Fq "Pop" /etc/os-release
+then
+    sudo apt-get -y install bat
+else
+    batpkg=bat_0.12.1_amd64.deb
+    curl -L -O https://github.com/sharkdp/bat/releases/download/v0.12.1/$batpkg
+    sudo dpkg -i ./$batpkg
+    rm ./$batpkg
+fi
 
 read -p "Install desktop apps? " -n 1 -r
 echo
