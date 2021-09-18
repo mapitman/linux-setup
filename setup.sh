@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# distro independent changes
+generic () {
+    for file in ./generic/*.sh
+    do
+        source $file
+    done
+}
+
 # Add some directories
 echo "Setting up source directories..."
 
@@ -27,14 +35,6 @@ else
     echo "Unable to detect distro or distro unsupported :("
     exit
 fi
-
-# distro independent changes
-function generic {
-    for file in ./generic/*.sh
-    do
-        source $file
-    done
-}
 
 # add current user to docker group
 echo "Adding current user to docker group..."
