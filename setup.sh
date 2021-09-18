@@ -23,6 +23,10 @@ then
     echo "Detected Fedora"
     source ./fedora/setup.sh
     generic
+elif grep -Fq "FreeBSD" /etc/os-release
+then
+    echo "Detected FreeBSD"
+    source ./freebsd/setup.sh
 else
     echo "Unable to detect distro or distro unsupported :("
     exit
