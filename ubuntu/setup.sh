@@ -9,7 +9,7 @@ sudo apt-get -y install make mercurial curl vim-nox universal-ctags autojump \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
 libssl-dev zlib1g-dev libcurl4-openssl-dev nmap pandoc \
-twine python3-autopep8 silversearcher-ag pv zfsutils-linux
+twine python3-autopep8 silversearcher-ag pv zfsutils-linux zsh zsh-doc
 
 if uname -a | grep -i -v -q Microsoft
 then
