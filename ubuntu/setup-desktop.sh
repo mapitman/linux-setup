@@ -9,7 +9,7 @@ libavcodec-extra ubuntu-restricted-extras
 # bluray/dvd
 sudo dpkg-reconfigure libdvd-pkg
 mkdir -p ~/.config/aacs/
-curl -L -o ~/.config/aacs/KEYDB.cfg http://vlc-bluray.whoknowsmy.name/files/KEYDB.cfg
+curl -k -L -o ~/.config/aacs/KEYDB.cfg http://vlc-bluray.whoknowsmy.name/files/KEYDB.cfg
 
 # keybase
 # keybasepkg=keybase_amd64.deb
