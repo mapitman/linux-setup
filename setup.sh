@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# distro independent changes
+generic () {
+    for file in ./generic/*.sh
+    do
+        source $file
+    done
+}
+
 # Add some directories
 echo "Setting up source directories..."
 
@@ -13,25 +21,20 @@ if grep -Fq "ubuntu" /etc/os-release
 then
     echo "Detected Ubuntu or Ubuntu derivative"
     source ./ubuntu/setup.sh
+    generic
 elif grep -Fq "arch" /etc/os-release
 then
     echo "Detected Arch or Arch derivative"
-    source ./arch.sh
+    source ./arch/setup.sh
 elif grep -Fq "Fedora" /etc/os-release
 then
     echo "Detected Fedora"
     source ./fedora/setup.sh
+    generic
 else
     echo "Unable to detect distro or distro unsupported :("
     exit
 fi
-
-# distro independent changes
-
-for file in ./generic/*.sh
-do
-    source $file
-done
 
 # add current user to docker group
 echo "Adding current user to docker group..."
