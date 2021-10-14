@@ -5,11 +5,12 @@
 sudo apt-get update && sudo apt-get upgrade -y
 
 # install necessary packages
-sudo apt-get -y install make mercurial curl vim-nox universal-ctags autojump \
+sudo apt-get -y install make mercurial curl vim-nox universal-ctags \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
 libssl-dev zlib1g-dev libcurl4-openssl-dev nmap pandoc \
-twine python3-autopep8 silversearcher-ag pv zfsutils-linux zsh zsh-doc
+twine python3-autopep8 pv zfsutils-linux zsh zsh-doc neofetch \
+imagemagick openjdk-11-jdk
 
 if uname -a | grep -i -v -q Microsoft
 then
