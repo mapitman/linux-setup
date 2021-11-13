@@ -1,20 +1,13 @@
 #!/usr/bin/env bash
 
 sudo dnf -y upgrade
-sudo dnf install -y mercurial vim ctags docker autojump \
+sudo dnf install -y mercurial vim ctags docker zsh \
     make autoconf autogen libtool flex bison openconnect pwgen ranger \
     dialog python3-pip pylint pandoc tmux htop jq bat \
     python3-pypandoc twine python3-autopep8 kubernetes-client \
-    NetworkManager-tui light python2-psutil \
-    python2-netifaces python2-requests autojump nodejs w3m
-
-sudo npm install -g npm
-sudo npm install -g gulp eslint
-
-for file in ./generic/*.sh
-do
-    source $file
-done
+    NetworkManager-tui light python3-psutil \
+    python3-netifaces python3-requests w3m \
+    dotnet-sdk-5.0 dotnet-sdk-3.1
 
 source ./golang-tools.sh
 
