@@ -7,7 +7,7 @@ sudo dnf install -y mercurial vim ctags docker zsh \
     python3-pypandoc twine python3-autopep8 kubernetes-client \
     NetworkManager-tui light python3-psutil \
     python3-netifaces python3-requests w3m \
-    dotnet-sdk-5.0 dotnet-sdk-3.1
+    dotnet-sdk-5.0 dotnet-sdk-3.1 util-linux-user
 
 source ./golang-tools.sh
 
