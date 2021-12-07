@@ -15,7 +15,7 @@ read -p "Install desktop apps? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    source ./setup-desktop.sh
+    source ./fedora/setup-desktop.sh
 
     for file in ./generic/desktop/*.sh
     do
@@ -27,5 +27,5 @@ read -p "Install laptop apps? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-   source ./setup-laptop.sh
+   source ./fedors/setup-laptop.sh
 fi
