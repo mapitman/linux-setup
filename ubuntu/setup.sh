@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
+# Add .NET PPA
+wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
 # update package library and current packages
 
 sudo apt-get update && sudo apt-get upgrade -y
+
+sudo apt-get install -y apt-transport-https && sudo apt-get update
 
 # install necessary packages
 sudo apt-get -y install make mercurial curl vim-nox universal-ctags \
@@ -10,7 +17,7 @@ build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
 libssl-dev zlib1g-dev libcurl4-openssl-dev nmap pandoc \
 twine python3-autopep8 pv zfsutils-linux zsh zsh-doc neofetch \
-imagemagick openjdk-11-jdk
+imagemagick openjdk-11-jdk dotnet-sdk-6.0 dotnet-sdk-3.1 dotnet-sdk-5.0
 
 if uname -a | grep -i -v -q Microsoft
 then
@@ -50,8 +57,4 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     source ./ubuntu/setup-laptop.sh
-    for file in ./ubuntu/laptop/*.sh
-    do
-        source $file
-    done
 fi

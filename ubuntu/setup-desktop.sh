@@ -3,9 +3,8 @@ sudo add-apt-repository universe
 
 sudo apt install -y audacity  \
 darktable evolution evolution-ews ffmpeg libavcodec-dev \
-flameshot fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
-libavcodec-extra ubuntu-restricted-extras gnome-shell-extension-impatience \
-gnome-shell-extension-no-annoyance 
+fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
+libavcodec-extra ubuntu-restricted-extras
 
 # bluray/dvd
 read -p "Install Bluray/DVD tools? " -n 1 -r
@@ -21,7 +20,7 @@ fi
 # Install Pop!_OS packages
 if grep -Fq "Pop" /etc/os-release
 then
-    sudo apt install -y gnome-shell-extension-ubuntu-dock slack-desktop
+    sudo apt install -y gnome-shell-extension-dash-to-panel slack-desktop
 else
     # slack
     curl -o /tmp/slack-desktop-4.4.2-amd64.deb  https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.2-amd64.deb
