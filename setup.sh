@@ -22,6 +22,10 @@ then
     echo "Detected Ubuntu or Ubuntu derivative"
     source ./ubuntu/setup.sh
     generic
+elif grep -Fq "endeavouros" /etc/os-release
+then
+    echo "Detected EndeavourOS"
+    source ./endeavouros/setup.sh
 elif grep -Fq "arch" /etc/os-release
 then
     echo "Detected Arch or Arch derivative"
