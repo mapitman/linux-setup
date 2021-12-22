@@ -7,8 +7,6 @@ yay -S --noconfirm --needed base-devel mercurial vim ctags docker \
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 
-source generic/zsh-customizations.sh
-
 read -p "Install golang and related tools? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
@@ -46,8 +44,9 @@ then
     yay -S --needed visual-studio-code-bin ttf-fira-code xclip \
     ttf-cascadia-code freerdp remmina libvncserver google-chrome \
     darktable ffmpeg gimp gnome-tweaks kdiff3 obs-studio \
-    chrome-gnome-shell mdview bluez bluez-utils
+    chrome-gnome-shell mdview bluez bluez-utils jdk
 
     sudo systemctl enable --now bluetooth
 fi
 
+source generic/zsh-customizations.sh
