@@ -44,7 +44,8 @@ then
     yay -S --needed visual-studio-code-bin ttf-fira-code xclip \
     ttf-cascadia-code freerdp remmina libvncserver google-chrome \
     darktable ffmpeg gimp gnome-tweaks kdiff3 obs-studio \
-    chrome-gnome-shell mdview bluez bluez-utils jdk
+    chrome-gnome-shell mdview bluez bluez-utils jdk \
+    gnome-shell-extension-pop-shell-git
 
     sudo systemctl enable --now bluetooth
 fi
