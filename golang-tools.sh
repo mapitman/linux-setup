@@ -6,28 +6,27 @@ mkdir -p ~/go/bin
 mkdir -p ~/go/pkg
 mkdir -p ~/go/src
 
-echo "go get -u -v extra golang tools..."
+echo "Install extra golang tools..."
 GOPATH="$HOME/go"
 PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
-go get -u -v github.com/jstemmer/gotags
-go get -u -v github.com/mdempsky/gocode
-go get -u -v golang.org/x/tools/cmd/goimports
-go get -u -v github.com/rogpeppe/godef
-go get -u -v golang.org/x/tools/cmd/guru
-go get -u -v golang.org/x/tools/cmd/gorename
-go get -u -v github.com/golang/lint/golint
-go get -u -v github.com/kisielk/errcheck
-go get -u -v github.com/uudashr/gopkgs/cmd/gopkgs
-go get -u -v github.com/ramya-rao-a/go-outline
-go get -u -v github.com/acroca/go-symbols
-go get -u -v golang.org/x/tools/cmd/godoc
-go get -u -v github.com/sqs/goreturns
-go get -u -v github.com/derekparker/delve/cmd/dlv
-go get -u -v github.com/fatih/gomodifytags
-go get -u -v github.com/haya14busa/goplay/cmd/goplay
-go get -u -v github.com/josharian/impl
-go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
-go get -u -v github.com/cweill/gotests/...
-go get -u -v github.com/mapitman/beats
-go get -u -v github.com/mapitman/mdview
-go get -u -v github.com/justjanne/powerline-go
+go install github.com/jstemmer/gotags@latest
+go install github.com/mdempsky/gocode@latest
+go install golang.org/x/tools/cmd/goimports@latest
+go install github.com/rogpeppe/godef@latest
+go install golang.org/x/tools/cmd/guru@latest
+go install golang.org/x/tools/cmd/gorename@latest
+go install golang.org/x/lint/golint@latest
+go install github.com/kisielk/errcheck@latest
+go install github.com/uudashr/gopkgs/cmd/gopkgs@latest
+go install github.com/ramya-rao-a/go-outline@latest
+go install github.com/acroca/go-symbols@latest
+go install golang.org/x/tools/cmd/godoc@latest
+go install github.com/sqs/goreturns@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
+go install github.com/fatih/gomodifytags@latest
+go install github.com/haya14busa/goplay/cmd/goplay@latest
+go install github.com/josharian/impl@latest
+go install github.com/davidrjenni/reftools/cmd/fillstruct@latest
+go install github.com/cweill/gotests/...@latest
+go install github.com/mapitman/beats@latest
+go install github.com/justjanne/powerline-go@latest

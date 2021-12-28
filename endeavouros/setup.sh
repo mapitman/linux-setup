@@ -12,7 +12,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     yay -S --noconfirm --needed go
-    source generic/golang-tools.sh
+    source golang-tools.sh
 fi
 
 read -p "Install dotnet core sdk and related tools? " -n 1 -r
