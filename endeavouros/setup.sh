@@ -2,7 +2,7 @@
 
 # install arch packages
 yay -S --noconfirm --needed base-devel mercurial vim ctags docker \
-    autogen openconnect pwgen ranger bind-tools imagemagick zsh
+    autogen openconnect pwgen ranger bind-tools imagemagick zsh python-pip
 
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
