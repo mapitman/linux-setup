@@ -19,7 +19,7 @@ read -p "Install dotnet core sdk and related tools? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    yay -S dotnet-sdk-bin dotnet-sdk-5.0-bin
+    yay -S dotnet-sdk-bin dotnet-sdk-5.0-bin aspnet-runtime
 fi
 
 
