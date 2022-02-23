@@ -45,7 +45,7 @@ then
     ttf-cascadia-code freerdp remmina libvncserver google-chrome \
     darktable ffmpeg gimp gnome-tweaks kdiff3 obs-studio \
     chrome-gnome-shell mdview bluez bluez-utils jdk \
-    gnome-shell-extension-pop-shell-git
+    gnome-shell-extension-pop-shell-git easyeffects
 
     sudo systemctl enable --now bluetooth
 fi
