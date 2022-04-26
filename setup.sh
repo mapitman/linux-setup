@@ -17,7 +17,11 @@ mkdir -p ~/src/work
 mkdir -p ~/bin
 
 # source distro dependent file
-if grep -Fq "ubuntu" /etc/os-release
+if grep -Fq "Pop!_OS" /etc/os-release
+then
+    echo "Detected Pop!_OS"
+    source ./pop_os/setup.sh
+elif grep -Fq "ubuntu" /etc/os-release
 then
     echo "Detected Ubuntu or Ubuntu derivative"
     source ./ubuntu/setup.sh
