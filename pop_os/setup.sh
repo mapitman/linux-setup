@@ -24,9 +24,7 @@ bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras code fonts-cascadia-code \
-caffeine
-
-source ./generic/zsh-customizations.sh
+caffeine mkvtoolnix
 
 dconf load /org/gnome/shell/keybindings/ <<EOF
 [/]
@@ -40,3 +38,5 @@ switch-to-application-7=['<Super>7']
 switch-to-application-8=['<Super>8']
 switch-to-application-9=['<Super>9']
 EOF
+
+source ./generic/zsh-customizations.sh

@@ -18,3 +18,6 @@ rm -rf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/.git
 mkdir -p "$HOME/.zsh"
 git clone --depth=1 https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 rm -rf $HOME/.zsh/pure/.git
+
+exit
+
