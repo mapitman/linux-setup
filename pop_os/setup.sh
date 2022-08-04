@@ -11,8 +11,6 @@ rm packages-microsoft-prod.deb
 
 sudo apt-get update && sudo apt-get upgrade -y
 
-sudo apt-get install -y apt-transport-https && sudo apt-get update
-
 # install necessary packages
 sudo apt-get -y install make mercurial curl neovim universal-ctags \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
@@ -24,7 +22,7 @@ bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras code fonts-cascadia-code \
-caffeine mkvtoolnix
+caffeine mkvtoolnix golang apt-transport-https handbrake handbrake-cli
 
 dconf load /org/gnome/shell/keybindings/ <<EOF
 [/]
@@ -40,3 +38,12 @@ switch-to-application-9=['<Super>9']
 EOF
 
 source ./generic/zsh-customizations.sh
+
+flatpak install com.github.tchx84.Flatseal com.google.Chrome
+
+read -p "Install makemkv? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ./makemkv.sh
+fi
