@@ -22,7 +22,7 @@ bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras code fonts-cascadia-code \
-caffeine mkvtoolnix golang apt-transport-https handbrake handbrake-cli
+mkvtoolnix golang apt-transport-https handbrake handbrake-cli
 
 source ./dconf.sh
 source ../generic/zsh-customizations.sh
