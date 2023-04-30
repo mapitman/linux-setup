@@ -7,6 +7,9 @@ curl -O https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-pr
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
+# Quickemu PPA
+sudo apt-add-repository ppa:flexiondotorg/quickemu
+
 # update package library and current packages
 
 sudo apt-get update && sudo apt-get upgrade -y
@@ -22,7 +25,8 @@ bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras code fonts-cascadia-code \
-mkvtoolnix golang apt-transport-https handbrake handbrake-cli
+mkvtoolnix golang apt-transport-https handbrake handbrake-cli \
+libaacs-dev libbluray2 quickemu
 
 source ./dconf.sh
 source ../generic/zsh-customizations.sh
