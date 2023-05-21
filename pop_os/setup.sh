@@ -19,7 +19,7 @@ sudo apt-get -y install make mercurial curl neovim universal-ctags \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
 libssl-dev zlib1g-dev libcurl4-openssl-dev nmap pandoc \
-twine python3-autopep8 pv zfsutils-linux zsh zsh-doc neofetch \
+twine python3-autopep8 pv zfsutils-linux zsh zsh-doc \
 imagemagick openjdk-11-jdk dotnet-sdk-6.0 dotnet-sdk-7.0 \
 bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
@@ -41,5 +41,8 @@ then
     fi
 fi
 
+source ./pop_os/fastfetch.sh
 source ./pop_os/dconf.sh
 source ./generic/zsh-customizations.sh
+
+
