@@ -26,7 +26,7 @@ audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras code fonts-cascadia-code \
 mkvtoolnix golang apt-transport-https handbrake handbrake-cli \
-libaacs-dev libbluray2 quickemu powershell
+libaacs-dev libbluray2 quickemu powershell cmake
 
 
 flatpak install com.github.tchx84.Flatseal com.google.Chrome
