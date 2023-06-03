@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo add-apt-repository universe
+sudo add-apt-repository -y universe
 
 # Add .NET PPA
 curl -O https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
@@ -8,7 +8,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
 # Quickemu PPA
-sudo apt-add-repository ppa:flexiondotorg/quickemu
+sudo apt-add-repository -y ppa:flexiondotorg/quickemu
 
 # update package library and current packages
 
@@ -26,7 +26,7 @@ audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras code fonts-cascadia-code \
 mkvtoolnix golang apt-transport-https handbrake handbrake-cli \
-libaacs-dev libbluray2 quickemu powershell cmake
+libaacs-dev libbluray2 quickemu powershell cmake nala
 
 
 flatpak install com.github.tchx84.Flatseal com.google.Chrome
