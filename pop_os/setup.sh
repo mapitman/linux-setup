@@ -10,6 +10,10 @@ rm packages-microsoft-prod.deb
 # Quickemu PPA
 sudo apt-add-repository -y ppa:flexiondotorg/quickemu
 
+# Papirus Icons
+sudo add-apt-repository -y ppa:papirus/papirus
+
+
 # update package library and current packages
 
 sudo apt-get update && sudo apt-get upgrade -y
@@ -26,7 +30,7 @@ audacity darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras code fonts-cascadia-code \
 mkvtoolnix golang apt-transport-https handbrake handbrake-cli \
-libaacs-dev libbluray2 quickemu powershell cmake nala
+libaacs-dev libbluray2 quickemu powershell cmake nala papirus-icon-theme
 
 
 flatpak install com.github.tchx84.Flatseal com.google.Chrome
