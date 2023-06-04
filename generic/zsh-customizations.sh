@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-if [[ ! -d $HOME/.oh-my-zsh ]]
-then
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
 
 # plugins
 # Autosuggestions
@@ -29,5 +25,10 @@ then
     rm -rf $HOME/.zsh/pure/.git
 fi
 
+if [[ ! -d $HOME/.oh-my-zsh ]]
+then
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "Press ctrl-d to continue"
+fi
 exit
 
