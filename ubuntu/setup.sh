@@ -7,6 +7,11 @@ curl -O https://packages.microsoft.com/config/ubuntu/23.04/packages-microsoft-pr
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
 
 # Quickemu PPA
 sudo apt-add-repository -y ppa:flexiondotorg/quickemu
@@ -18,10 +23,10 @@ sudo add-apt-repository -y ppa:papirus/papirus
 
 sudo nala update && sudo nala upgrade
 
-sudo nala install apt-transport-https && sudo nala update
+sudo nala install -y apt-transport-https && sudo nala update
 
 # install necessary packages
-sudo nala install \
+sudo nala install -y \
 make mercurial curl neovim universal-ctags \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
@@ -30,14 +35,14 @@ twine python3-autopep8 pv zfsutils-linux zsh zsh-doc \
 imagemagick openjdk-11-jdk dotnet-sdk-6.0 dotnet-sdk-7.0 \
 bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 ffmpeg libavcodec-dev \
-libavcodec-extra ubuntu-restricted-extras code  \
+libavcodec-extra ubuntu-restricted-extras  \
 mkvtoolnix golang apt-transport-https handbrake-cli \
-libaacs-dev libbluray2 quickemu cmake
+libaacs-dev libbluray2 quickemu cmake code
 
 
 if uname -a | grep -i -v -q Microsoft
 then
-    sudo nala install docker.io tmux openconnect
+    sudo nala install -y docker.io tmux openconnect
 fi
 
 read -p "Install desktop apps? " -n 1 -r
