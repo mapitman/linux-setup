@@ -19,7 +19,8 @@ sudo add-apt-repository -y ppa:papirus/papirus
 sudo apt-get update && sudo apt-get upgrade -y
 
 # install necessary packages
-sudo apt-get -y install make mercurial curl neovim universal-ctags \
+sudo apt-get -y install \
+make mercurial curl neovim universal-ctags \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
 libssl-dev zlib1g-dev libcurl4-openssl-dev nmap pandoc \
