@@ -1,1 +1,0 @@
-../ubuntu/fastfetch.sh

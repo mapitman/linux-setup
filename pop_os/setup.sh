@@ -46,7 +46,7 @@ then
     fi
 fi
 
-source ./pop_os/fastfetch.sh
+source ./generic/fastfetch.sh
 source ./pop_os/dconf.sh
 source ./generic/zsh-customizations.sh
 
