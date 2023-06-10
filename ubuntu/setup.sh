@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get update && sudo apt-get install -y curl nala gpg
+sudo apt-get update && sudo apt-get install -y curl nala gpg apt-transport-https
 
 # Add .NET PPA
 curl -O https://packages.microsoft.com/config/ubuntu/23.04/packages-microsoft-prod.deb
@@ -14,12 +14,10 @@ rm -f packages.microsoft.gpg
 
 # update package library and current packages
 
-sudo nala upgrade
-
-sudo nala install apt-transport-https && sudo nala update
+sudo nala upgrade -y
 
 # install necessary packages
-sudo nala install \
+sudo nala install -y \
 make mercurial curl neovim universal-ctags \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
 dialog python3-pip pylint pandoc htop jq renameutils checkinstall \
@@ -30,7 +28,7 @@ bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 ffmpeg libavcodec-dev \
 libavcodec-extra ubuntu-restricted-extras  \
 mkvtoolnix golang apt-transport-https handbrake-cli \
-libaacs-dev libbluray2 cmake
+libaacs-dev libbluray2 cmake awscli
 
 
 if uname -a | grep -i -v -q Microsoft
@@ -48,11 +46,6 @@ then
     source ./ubuntu/setup-desktop.sh
 
     for file in ./ubuntu/desktop/*.sh
-    do
-        source $file
-    done
-
-    for file in ./generic/desktop/*.sh
     do
         source $file
     done

@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-gopkg=go1.15.linux-amd64.tar.gz
-curl -O https://dl.google.com/go/$gopkg
-sudo rm -r /usr/local/go
-sudo tar -C /usr/local -xzf $gopkg
-rm $gopkg
-
 # Setup Golang paths and extra tools
 mkdir -p $HOME/go
 mkdir -p $HOME/go/bin
@@ -17,50 +11,50 @@ PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 
 printf "installing extra golang tools"
 printf "."
-go get -u golang.org/x/lint/golint
+go install golang.org/x/lint/golint@latest
 printf "."
-go get -u github.com/jstemmer/gotags
+go install github.com/jstemmer/gotags@latest
 printf "."
-go get -u golang.org/x/tools/cmd/goimports
+go install golang.org/x/tools/cmd/goimports@latest
 printf "."
-go get -u github.com/rogpeppe/godef
+go install github.com/rogpeppe/godef@latest
 printf "."
-go get -u golang.org/x/tools/cmd/guru
+go install golang.org/x/tools/cmd/guru@latest
 printf "."
-go get -u golang.org/x/tools/cmd/gorename
+go install golang.org/x/tools/cmd/gorename@latest
 printf "."
-go get -u github.com/golang/lint/golint
+go install github.com/golang/lint/golint@latest
 printf "."
-go get -u github.com/kisielk/errcheck
+go install github.com/kisielk/errcheck@latest
 printf "."
-go get -u github.com/uudashr/gopkgs/cmd/gopkgs
+go install github.com/uudashr/gopkgs/cmd/gopkgs@latest
 printf "."
-go get -u github.com/ramya-rao-a/go-outline
+go install github.com/ramya-rao-a/go-outline@latest
 printf "."
-go get -u github.com/acroca/go-symbols
+go install github.com/acroca/go-symbols@latest
 printf "."
-go get -u golang.org/x/tools/cmd/godoc
+go install golang.org/x/tools/cmd/godoc@latest
 printf "."
-go get -u github.com/sqs/goreturns
+go install github.com/sqs/goreturns@latest
 printf "."
-go get -u github.com/derekparker/delve/cmd/dlv
+go install github.com/derekparker/delve/cmd/dlv@latest
 printf "."
-go get -u github.com/fatih/gomodifytags
+go install github.com/fatih/gomodifytags@latest
 printf "."
-go get -u github.com/haya14busa/goplay/cmd/goplay
+go install github.com/haya14busa/goplay/cmd/goplay@latest
 printf "."
-go get -u github.com/josharian/impl
+go install github.com/josharian/impl@latest
 printf "."
-go get -u github.com/davidrjenni/reftools/cmd/fillstruct
+go install github.com/davidrjenni/reftools/cmd/fillstruct@latest
 printf "."
-go get -u github.com/cweill/gotests/...
+go install github.com/cweill/gotests/...@latest
 printf "."
-go get -u github.com/stamblerre/gocode
+go install github.com/stamblerre/gocode@latest
 printf "."
-go get -u github.com/mapitman/beats
+go install github.com/mapitman/beats@latest
 printf "."
-go get -u github.com/mapitman/mdview
+go install github.com/mapitman/mdview@latest
 printf "."
-go get -u github.com/justjanne/powerline-go
+go install github.com/justjanne/powerline-go@latest
 printf "."
 printf "\n"
