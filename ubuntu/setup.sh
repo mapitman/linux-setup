@@ -28,7 +28,7 @@ bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 ffmpeg libavcodec-dev \
 libavcodec-extra ubuntu-restricted-extras  \
 mkvtoolnix golang apt-transport-https handbrake-cli \
-libaacs-dev libbluray2 cmake awscli
+libaacs-dev libbluray2 cmake awscli lm-sensors
 
 
 if uname -a | grep -i -v -q Microsoft
