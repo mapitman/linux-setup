@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-sudo apt-get update && sudo apt-get install -y curl nala gpg apt-transport-https
+sudo apt-get update && sudo apt-get install -y curl nala gpg apt-transport-https lsb-release wget
+
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+sudo deb-get update
 
 # Add .NET PPA
 curl -O https://packages.microsoft.com/config/ubuntu/23.04/packages-microsoft-prod.deb
@@ -13,10 +16,9 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 rm -f packages.microsoft.gpg
 
 # update package library and current packages
-
 sudo nala upgrade -y
 
-# install necessary packages
+# install new packages
 sudo nala install -y \
 make mercurial curl neovim universal-ctags \
 build-essential autoconf autogen libtool flex bison pwgen ranger \
