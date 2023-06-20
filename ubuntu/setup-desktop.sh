@@ -14,6 +14,8 @@ fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras fonts-cascadia-code \
 handbrake papirus-icon-theme quickemu code gnome-browser-connector
 
+source ../../generic/jetbrains-toolbox.sh
+
 # bluray/dvd
 read -p "Install Bluray/DVD tools? " -n 1 -r
 echo

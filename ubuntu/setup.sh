@@ -30,7 +30,8 @@ bat hugo yadm git-extras python-is-python3 docker.io tmux openconnect \
 ffmpeg libavcodec-dev \
 libavcodec-extra ubuntu-restricted-extras  \
 mkvtoolnix golang apt-transport-https handbrake-cli \
-libaacs-dev libbluray2 cmake awscli lm-sensors
+libaacs-dev libbluray2 cmake awscli lm-sensors libfuse2 libxi6 libxrender1 \
+libxtst6 mesa-utils libfontconfig libgtk-3-bin tar
 
 
 if uname -a | grep -i -v -q Microsoft
