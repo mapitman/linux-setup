@@ -30,3 +30,4 @@ go install github.com/davidrjenni/reftools/cmd/fillstruct@latest
 go install github.com/cweill/gotests/...@latest
 go install github.com/mapitman/beats@latest
 go install github.com/justjanne/powerline-go@latest
+go install github.com/mapitman/mdview@latest
