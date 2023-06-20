@@ -2,17 +2,14 @@
 
 sudo add-apt-repository -y universe
 
-# Quickemu PPA
-sudo apt-add-repository -y ppa:flexiondotorg/quickemu
-
-# Papirus Icons
-sudo add-apt-repository -y ppa:papirus/papirus
-
 sudo nala install -y audacity  \
 darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras fonts-cascadia-code \
-handbrake papirus-icon-theme quickemu code gnome-browser-connector
+handbrake code gnome-browser-connector
+
+deb-get install android-messages-desktop youtube-music quickemu \
+papirus-icon-theme
 
 source ../../generic/jetbrains-toolbox.sh
 

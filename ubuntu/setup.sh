@@ -42,6 +42,8 @@ fi
 source ./ubuntu/fastfetch.sh
 source ./generic/zsh-customizations.sh
 
+deb-get install fd
+
 read -p "Install desktop apps? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
