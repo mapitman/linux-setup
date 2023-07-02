@@ -6,8 +6,9 @@ else
     git pull -p
 fi
 
-pushd ~/src/github/LinusDierheimer/fastfetch
+echo "Building and installing Fastfetch..."
+pushd ~/src/github/LinusDierheimer/fastfetch || exit
 cmake .
 make
 sudo cmake --install . --prefix /usr/local
-popd
+popd || exit
