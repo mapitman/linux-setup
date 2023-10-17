@@ -2,16 +2,18 @@
 
 sudo add-apt-repository -y universe
 
-sudo nala install -y audacity  \
+sudo nala install -y audacity pipx \
 darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras fonts-cascadia-code \
 handbrake code gnome-browser-connector
 
+pipx ensurepath
 deb-get install android-messages-desktop youtube-music quickemu \
 papirus-icon-theme
 
-source ../../generic/jetbrains-toolbox.sh
+pwd
+source ./generic/jetbrains-toolbox.sh
 
 # bluray/dvd
 read -p "Install Bluray/DVD tools? " -n 1 -r

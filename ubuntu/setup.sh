@@ -30,7 +30,6 @@ then
     sudo nala install -y docker.io tmux openconnect
 fi
 
-source ./ubuntu/fastfetch.sh
 source ./generic/zsh-customizations.sh
 
 deb-get install fd

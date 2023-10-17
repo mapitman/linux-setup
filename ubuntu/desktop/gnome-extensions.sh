@@ -2,14 +2,15 @@
 
 pipx install gnome-extensions-cli --system-site-packages
 
-gext install caffeine@patapon.info
-gext install blur-my-shell@aunetx
-gext install clipboard-history@alexsaveau.dev
-gext install freon@UshakovVasilii_Github.yahoo.com
-gext install wintile@nowsci.com
 
-gext enable caffeine@patapon.info
-gext enable blur-my-shell@aunetx
-gext enable clipboard-history@alexsaveau.dev
-gext enable freon@UshakovVasilii_Github.yahoo.com
-gext enable wintile@nowsci.com
+"$HOME"/.local/bin/gext install caffeine@patapon.info
+"$HOME"/.local/bin/gext install blur-my-shell@aunetx
+"$HOME"/.local/bin/gext install clipboard-history@alexsaveau.dev
+"$HOME"/.local/bin/gext install freon@UshakovVasilii_Github.yahoo.com
+"$HOME"/.local/bin/gext install wintile@nowsci.com
+
+"$HOME"/.local/bin/gext enable caffeine@patapon.info
+"$HOME"/.local/bin/gext enable blur-my-shell@aunetx
+"$HOME"/.local/bin/gext enable clipboard-history@alexsaveau.dev
+"$HOME"/.local/bin/gext enable freon@UshakovVasilii_Github.yahoo.com
+"$HOME"/.local/bin/gext enable wintile@nowsci.com
