@@ -6,8 +6,9 @@ sudo nala install -y audacity pipx \
 darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras fonts-cascadia-code \
-handbrake code gnome-browser-connector
+handbrake gnome-browser-connector
 
+sudo snap install --classic code
 pipx ensurepath
 deb-get install android-messages-desktop youtube-music quickemu \
 papirus-icon-theme
