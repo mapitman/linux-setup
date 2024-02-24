@@ -11,12 +11,7 @@ handbrake gnome-browser-connector
 sudo snap install --classic code
 pipx ensurepath
 deb-get install android-messages-desktop youtube-music quickemu \
-papirus-icon-theme
-
-curl -L -O https://github.com/mapitman/mdview/releases/download/1.5.0/mdview_1.5.0_amd64.deb
-sudo dpkg -i ./mdview_1.5.0_amd64.deb
-rm ./mdview_1.5.0_amd64.deb
-
+papirus-icon-theme mdview
 
 pwd
 source ./generic/jetbrains-toolbox.sh
