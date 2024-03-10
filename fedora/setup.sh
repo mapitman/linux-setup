@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 sudo dnf -y upgrade
-sudo dnf install -y mercurial vim ctags docker zsh \
-    make autoconf autogen libtool flex bison openconnect pwgen ranger \
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:TheLocehiliosan:yadm/Fedora_39/home:TheLocehiliosan:yadm.repo
+sudo dnf install -y mercurial neovim ctags docker zsh \
+    make autoconf autogen libtool flex bison pwgen ranger \
     dialog python3-pip pylint pandoc tmux htop jq bat \
-    python3-pypandoc twine python3-autopep8 kubernetes-client \
-    NetworkManager-tui light python3-psutil \
+    python3-pypandoc twine python3-autopep8 yadm golang\
+    NetworkManager-tui light python3-psutil fastfetch \
     python3-netifaces python3-requests w3m \
-    dotnet-sdk-5.0 dotnet-sdk-3.1 util-linux-user
+    dotnet-sdk-6.0 dotnet-sdk-7.0 util-linux-user
 
 source ./golang-tools.sh
 
