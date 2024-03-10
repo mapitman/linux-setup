@@ -23,8 +23,6 @@ go install golang.org/x/tools/cmd/guru@latest
 printf "."
 go install golang.org/x/tools/cmd/gorename@latest
 printf "."
-go install github.com/golang/lint/golint@latest
-printf "."
 go install github.com/kisielk/errcheck@latest
 printf "."
 go install github.com/uudashr/gopkgs/cmd/gopkgs@latest
@@ -37,7 +35,7 @@ go install golang.org/x/tools/cmd/godoc@latest
 printf "."
 go install github.com/sqs/goreturns@latest
 printf "."
-go install github.com/derekparker/delve/cmd/dlv@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
 printf "."
 go install github.com/fatih/gomodifytags@latest
 printf "."

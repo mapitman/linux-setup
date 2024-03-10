@@ -8,20 +8,13 @@ sudo dnf install -y mercurial neovim ctags docker zsh \
     python3-pypandoc twine python3-autopep8 yadm golang\
     NetworkManager-tui light python3-psutil fastfetch \
     python3-netifaces python3-requests w3m \
-    dotnet-sdk-6.0 dotnet-sdk-7.0 util-linux-user
-
-source ./golang-tools.sh
+    dotnet-sdk-6.0 dotnet-sdk-7.0 dotnet-sdk-8.0 util-linux-user
 
 read -p "Install desktop apps? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     source ./fedora/setup-desktop.sh
-
-    for file in ./generic/desktop/*.sh
-    do
-        source $file
-    done
 fi
 
 read -p "Install laptop apps? " -n 1 -r
