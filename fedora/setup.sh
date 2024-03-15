@@ -8,7 +8,8 @@ sudo dnf install -y mercurial neovim ctags docker zsh \
     python3-pypandoc twine python3-autopep8 yadm golang\
     NetworkManager-tui light python3-psutil fastfetch \
     python3-netifaces python3-requests w3m \
-    dotnet-sdk-6.0 dotnet-sdk-7.0 dotnet-sdk-8.0 util-linux-user
+    dotnet-sdk-6.0 dotnet-sdk-7.0 dotnet-sdk-8.0 util-linux-user \
+    rpmdevtools rpmlint
 
 read -p "Install desktop apps? " -n 1 -r
 echo

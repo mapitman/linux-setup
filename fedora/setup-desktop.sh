@@ -11,7 +11,8 @@ sudo dnf install -y ffmpeg ffmpeg-devel gitk git-gui cascadia-code-fonts\
     java-latest-openjdk audacity darktable evolution \
     gimp krita gnome-shell-extension-caffeine gnome-shell-extension-blur-my-shell \
     gnome-shell-extension-freon gpaste gnome-shell-extension-gpaste \
-    gpaste-zsh-completion gpaste-bash-completion gpaste-ui --allowerasing
+    gpaste-zsh-completion gpaste-bash-completion gpaste-ui waybar \
+    --allowerasing
 
 #sudo yum install -y https://prerelease.keybase.io/keybase_amd64.rpm
 #run_keybase
