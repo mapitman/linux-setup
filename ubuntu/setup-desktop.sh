@@ -6,7 +6,7 @@ sudo nala install -y audacity pipx \
 darktable evolution evolution-ews ffmpeg libavcodec-dev \
 fonts-firacode gimp gnome-tweaks kdiff3 obs-studio xclip \
 libavcodec-extra ubuntu-restricted-extras fonts-cascadia-code \
-handbrake gnome-browser-connector
+handbrake gnome-browser-connector kitty
 
 sudo snap install --classic code
 pipx ensurepath
