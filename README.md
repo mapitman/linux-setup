@@ -1,6 +1,9 @@
 # linux-setup
 
+**NOTE: I'm no longer updating the scripts in this repo. I'm using [mapitman/linux-bootstrap](https://github.com/mapitman/linux-bootstrap) instead.**
+
 Scripts for getting my Linux environment set up after doing a fresh install. Works with Ubuntu, Fedora and Arch.  
+
 
 On Arch (or Arch derivatives) this will install [aurman](https://aur.archlinux.org/packages/aurman) to help manage AUR packages. 
 
