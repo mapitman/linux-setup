@@ -1,6 +1,6 @@
 # linux-setup
 
-**NOTE: I'm no longer updating the scripts in this repo. I'm using [mapitman/linux-bootstrap](/mapitman/linux-bootstrap) instead.**
+**NOTE: I'm no longer updating the scripts in this repo. I'm using [mapitman/linux-bootstrap](https://github.com/mapitman/linux-bootstrap) instead.**
 
 Scripts for getting my Linux environment set up after doing a fresh install. Works with Ubuntu, Fedora and Arch.  
 
